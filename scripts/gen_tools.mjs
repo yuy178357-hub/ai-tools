@@ -97,10 +97,13 @@ async function main() {
   const END = "/* TOOLS:AUTO:END */";
   const entries = tools.map((t) => "  " + JSON.stringify(t)).join(",\n");
   const block = `${START}\n${entries}\n${END}`;
-  if (html.includes(START) && html.includes(END)) {
-    html = html.replace(new RegExp(START + "[\\s\\S]*?" + END), block);
+  // 用 indexOf 切片替换，避免 START/END 含正则元字符（()*）导致正则匹配失败
+  const si = html.indexOf(START);
+  const ei = html.indexOf(END);
+  if (si !== -1 && ei !== -1 && ei > si) {
+    html = html.slice(0, si) + block + html.slice(ei + END.length);
   } else {
-    html = html.replace(/const TOOLS = \[[\s\S]*?\];/, `const TOOLS = [\n${block}\n];`);
+    html = html.replace(/(?:const|let) TOOLS = \[[\s\S]*?\];/, `let TOOLS = [\n${block}\n];`);
   }
   writeFileSync(INDEX_HTML, html);
 

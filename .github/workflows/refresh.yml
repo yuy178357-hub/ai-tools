@@ -1,0 +1,35 @@
+name: Refresh AI tools data
+
+# 定时自动刷新社区信号（GitHub 星标 / HN 讨论热度），
+# 重新生成 tools.json（及 index.html 内联兜底），有变化才提交。
+on:
+  schedule:
+    - cron: "17 0 * * *"   # 每天 08:17 (UTC+8) 自动刷新
+  workflow_dispatch: {}     # 也支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Regenerate tools.json (live community signals)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/gen_tools.mjs
+      - name: Commit & push if changed
+        run: |
+          git config user.name "ai-tools-bot"
+          git config user.email "bot@ai-tools.local"
+          git add tools.json index.html
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "auto: refresh community signals"
+            git push
+          fi

@@ -30,6 +30,22 @@ const ROOT = join(__dirname, "..");
 const GH_TOKEN = process.env.GH_TOKEN || "";
 const PH_TOKEN = process.env.PH_TOKEN || "";
 
+// Product Hunt slug 映射（无 token 时不生效；slug 不准时优雅返回 null）
+const PH_SLUGS = {
+  "ChatGPT":"chatgpt", "Claude":"claude", "Midjourney":"midjourney", "Cursor":"cursor",
+  "GitHub Copilot":"github-copilot", "Runway":"runwayml", "Pika":"pika", "ElevenLabs":"eleven-labs",
+  "Suno":"suno", "Perplexity":"perplexity-ai", "Gamma":"gamma", "HeyGen":"heygen",
+  "Stable Diffusion":"stable-diffusion", "FLUX":"flux1", "Sora":"sora", "Claude Code":"claude-code",
+  "Kimi":"kimi", "DeepSeek":"deepseek", "Manus":"manus", "Figma AI":"figma-ai",
+  "ChatGPT Search":"chatgpt-search", "Genspark":"genspark", "Windsurf":"windsurf", "Cline":"cline",
+  "Veo":"veo", "Hailuo (MiniMax)":"hailuo", "Grok":"grok", "Gemini":"gemini", "Notion AI":"notion-ai",
+  "Jasper":"jasper", "DALL·E 3":"dall-e-3", "即梦 AI":"jimeng", "可灵 AI":"kling-ai",
+  "通义千问 Qwen":"qwen", "豆包 Doubao":"doubao", "Mistral (Le Chat)":"mistral-le-chat",
+  "Meta AI (Llama)":"meta-ai", "Ideogram":"ideogram", "Recraft":"recraft", "Tabnine":"tabnine",
+  "OpenAI Codex":"openai-codex", "Whisper":"whisper", "ChatPDF":"chatpdf", "秘塔 AI 搜索":"metaso",
+  "Udio":"udio"
+};
+
 /** 带超时的 JSON GET */
 async function fetchJSON(url, opts = {}, timeoutMs = 8000) {
   const ctrl = new AbortController();
@@ -141,10 +157,11 @@ export async function enrich(seed) {
     } catch (e) {
       console.warn(`  ⚠ HN 信号失败：${t.name}`);
     }
-    // 可选 PH（仅配置了 token 时）
-    if (PH_TOKEN && t.phSlug) {
+    // 可选 PH（仅配置了 token 时；slug 来自工具自带 phSlug 或 PH_SLUGS 映射）
+    const slug = t.phSlug || PH_SLUGS[t.name];
+    if (PH_TOKEN && slug) {
       try {
-        const v = await phVotes(t.phSlug);
+        const v = await phVotes(slug);
         if (typeof v === "number") {
           community.phVotes = v;
           community.sources.push("producthunt");
