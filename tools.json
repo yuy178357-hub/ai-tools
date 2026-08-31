@@ -22,7 +22,7 @@
           "hn"
         ],
         "hnMaxPoints": 2029,
-        "updatedAt": "2026-08-31T15:57:19.672Z",
+        "updatedAt": "2026-08-31T16:24:04.677Z",
         "score": 1.5
       }
     },
@@ -47,7 +47,7 @@
           "hn"
         ],
         "hnMaxPoints": 2626,
-        "updatedAt": "2026-08-31T15:57:20.230Z",
+        "updatedAt": "2026-08-31T16:24:05.363Z",
         "score": 1.5
       }
     },
@@ -72,7 +72,7 @@
           "hn"
         ],
         "hnMaxPoints": 361,
-        "updatedAt": "2026-08-31T15:57:20.654Z",
+        "updatedAt": "2026-08-31T16:24:05.810Z",
         "score": 1.2
       }
     },
@@ -97,7 +97,7 @@
           "hn"
         ],
         "hnMaxPoints": 254,
-        "updatedAt": "2026-08-31T15:57:21.124Z",
+        "updatedAt": "2026-08-31T16:24:06.245Z",
         "score": 1.1
       }
     },
@@ -122,7 +122,7 @@
           "hn"
         ],
         "hnMaxPoints": 1377,
-        "updatedAt": "2026-08-31T15:57:21.587Z",
+        "updatedAt": "2026-08-31T16:24:06.659Z",
         "score": 1.4
       }
     },
@@ -147,7 +147,7 @@
           "hn"
         ],
         "hnMaxPoints": 2421,
-        "updatedAt": "2026-08-31T15:57:22.041Z",
+        "updatedAt": "2026-08-31T16:24:07.096Z",
         "score": 1.5
       }
     },
@@ -172,7 +172,7 @@
           "hn"
         ],
         "hnMaxPoints": 704,
-        "updatedAt": "2026-08-31T15:57:22.512Z",
+        "updatedAt": "2026-08-31T16:24:07.525Z",
         "score": 1.3
       }
     },
@@ -214,7 +214,7 @@
           "hn"
         ],
         "hnMaxPoints": 1511,
-        "updatedAt": "2026-08-31T15:57:23.324Z",
+        "updatedAt": "2026-08-31T16:24:08.345Z",
         "score": 1.4
       }
     },
@@ -239,7 +239,7 @@
           "hn"
         ],
         "hnMaxPoints": 2905,
-        "updatedAt": "2026-08-31T15:57:23.838Z",
+        "updatedAt": "2026-08-31T16:24:08.797Z",
         "score": 1.5
       }
     },
@@ -264,7 +264,7 @@
           "hn"
         ],
         "hnMaxPoints": 516,
-        "updatedAt": "2026-08-31T15:57:24.250Z",
+        "updatedAt": "2026-08-31T16:24:09.253Z",
         "score": 1.2
       }
     },
@@ -289,7 +289,7 @@
           "hn"
         ],
         "hnMaxPoints": 607,
-        "updatedAt": "2026-08-31T15:57:24.650Z",
+        "updatedAt": "2026-08-31T16:24:09.675Z",
         "score": 1.3
       }
     },
@@ -314,7 +314,7 @@
           "hn"
         ],
         "hnMaxPoints": 419,
-        "updatedAt": "2026-08-31T15:57:25.134Z",
+        "updatedAt": "2026-08-31T16:24:10.118Z",
         "score": 1.2
       }
     },
@@ -339,7 +339,7 @@
           "hn"
         ],
         "hnMaxPoints": 302,
-        "updatedAt": "2026-08-31T15:57:25.650Z",
+        "updatedAt": "2026-08-31T16:24:10.569Z",
         "score": 1.1
       }
     },
@@ -364,7 +364,7 @@
           "hn"
         ],
         "hnMaxPoints": 481,
-        "updatedAt": "2026-08-31T15:57:26.176Z",
+        "updatedAt": "2026-08-31T16:24:11.002Z",
         "score": 1.2
       }
     },
@@ -406,7 +406,7 @@
           "hn"
         ],
         "hnMaxPoints": 725,
-        "updatedAt": "2026-08-31T15:57:26.942Z",
+        "updatedAt": "2026-08-31T16:24:11.859Z",
         "score": 1.3
       }
     },
@@ -431,7 +431,7 @@
           "hn"
         ],
         "hnMaxPoints": 390,
-        "updatedAt": "2026-08-31T15:57:27.496Z",
+        "updatedAt": "2026-08-31T16:24:12.296Z",
         "score": 1.2
       }
     },
@@ -456,9 +456,9 @@
           "github",
           "hn"
         ],
-        "githubStars": 108206,
+        "githubStars": 108208,
         "hnMaxPoints": 1705,
-        "updatedAt": "2026-08-31T15:57:28.415Z",
+        "updatedAt": "2026-08-31T16:24:13.212Z",
         "score": 5
       }
     },
@@ -483,7 +483,7 @@
           "hn"
         ],
         "hnMaxPoints": 1315,
-        "updatedAt": "2026-08-31T15:57:28.887Z",
+        "updatedAt": "2026-08-31T16:24:13.752Z",
         "score": 1.4
       }
     },
@@ -508,7 +508,7 @@
           "hn"
         ],
         "hnMaxPoints": 560,
-        "updatedAt": "2026-08-31T15:57:29.310Z",
+        "updatedAt": "2026-08-31T16:24:14.171Z",
         "score": 1.2
       }
     },
@@ -533,7 +533,7 @@
           "hn"
         ],
         "hnMaxPoints": 340,
-        "updatedAt": "2026-08-31T15:57:29.765Z",
+        "updatedAt": "2026-08-31T16:24:14.625Z",
         "score": 1.2
       }
     },
@@ -575,7 +575,7 @@
           "hn"
         ],
         "hnMaxPoints": 3346,
-        "updatedAt": "2026-08-31T15:57:30.564Z",
+        "updatedAt": "2026-08-31T16:24:15.576Z",
         "score": 1.5
       }
     },
@@ -600,7 +600,7 @@
           "hn"
         ],
         "hnMaxPoints": 1170,
-        "updatedAt": "2026-08-31T15:57:31.037Z",
+        "updatedAt": "2026-08-31T16:24:16.017Z",
         "score": 1.4
       }
     },
@@ -625,7 +625,7 @@
           "hn"
         ],
         "hnMaxPoints": 2091,
-        "updatedAt": "2026-08-31T15:57:31.472Z",
+        "updatedAt": "2026-08-31T16:24:16.446Z",
         "score": 1.5
       }
     },
@@ -667,7 +667,7 @@
           "hn"
         ],
         "hnMaxPoints": 684,
-        "updatedAt": "2026-08-31T15:57:32.389Z",
+        "updatedAt": "2026-08-31T16:24:17.307Z",
         "score": 1.3
       }
     },
@@ -692,7 +692,7 @@
           "hn"
         ],
         "hnMaxPoints": 3647,
-        "updatedAt": "2026-08-31T15:57:32.839Z",
+        "updatedAt": "2026-08-31T16:24:17.777Z",
         "score": 1.5
       }
     },
@@ -717,7 +717,7 @@
           "hn"
         ],
         "hnMaxPoints": 2445,
-        "updatedAt": "2026-08-31T15:57:33.359Z",
+        "updatedAt": "2026-08-31T16:24:18.433Z",
         "score": 1.5
       }
     },
@@ -742,7 +742,7 @@
           "hn"
         ],
         "hnMaxPoints": 234,
-        "updatedAt": "2026-08-31T15:57:33.763Z",
+        "updatedAt": "2026-08-31T16:24:18.853Z",
         "score": 1.1
       }
     },
@@ -767,7 +767,7 @@
           "hn"
         ],
         "hnMaxPoints": 2107,
-        "updatedAt": "2026-08-31T15:57:34.302Z",
+        "updatedAt": "2026-08-31T16:24:19.511Z",
         "score": 1.5
       }
     },
@@ -809,7 +809,7 @@
           "hn"
         ],
         "hnMaxPoints": 51,
-        "updatedAt": "2026-08-31T15:57:35.079Z",
+        "updatedAt": "2026-08-31T16:24:20.403Z",
         "score": 0.8
       }
     },
@@ -834,7 +834,7 @@
           "hn"
         ],
         "hnMaxPoints": 664,
-        "updatedAt": "2026-08-31T15:57:35.472Z",
+        "updatedAt": "2026-08-31T16:24:20.813Z",
         "score": 1.3
       }
     },
@@ -859,7 +859,7 @@
           "hn"
         ],
         "hnMaxPoints": 46,
-        "updatedAt": "2026-08-31T15:57:35.881Z",
+        "updatedAt": "2026-08-31T16:24:21.219Z",
         "score": 0.8
       }
     },
@@ -884,7 +884,7 @@
           "hn"
         ],
         "hnMaxPoints": 14,
-        "updatedAt": "2026-08-31T15:57:36.358Z",
+        "updatedAt": "2026-08-31T16:24:21.660Z",
         "score": 0.5
       }
     },
@@ -909,7 +909,7 @@
           "hn"
         ],
         "hnMaxPoints": 1727,
-        "updatedAt": "2026-08-31T15:57:36.794Z",
+        "updatedAt": "2026-08-31T16:24:22.206Z",
         "score": 1.5
       }
     },
@@ -934,7 +934,7 @@
           "hn"
         ],
         "hnMaxPoints": 3,
-        "updatedAt": "2026-08-31T15:57:37.160Z",
+        "updatedAt": "2026-08-31T16:24:22.588Z",
         "score": 0.3
       }
     },
@@ -959,7 +959,7 @@
           "hn"
         ],
         "hnMaxPoints": 1055,
-        "updatedAt": "2026-08-31T15:57:37.615Z",
+        "updatedAt": "2026-08-31T16:24:23.048Z",
         "score": 1.4
       }
     },
@@ -984,9 +984,9 @@
           "github",
           "hn"
         ],
-        "githubStars": 67224,
+        "githubStars": 67225,
         "hnMaxPoints": 198,
-        "updatedAt": "2026-08-31T15:57:38.550Z",
+        "updatedAt": "2026-08-31T16:24:23.956Z",
         "score": 4.4
       }
     },
@@ -1011,7 +1011,7 @@
           "hn"
         ],
         "hnMaxPoints": 844,
-        "updatedAt": "2026-08-31T15:57:39.032Z",
+        "updatedAt": "2026-08-31T16:24:24.408Z",
         "score": 1.3
       }
     },
@@ -1036,7 +1036,7 @@
           "hn"
         ],
         "hnMaxPoints": 240,
-        "updatedAt": "2026-08-31T15:57:39.449Z",
+        "updatedAt": "2026-08-31T16:24:24.804Z",
         "score": 1.1
       }
     },
@@ -1061,7 +1061,7 @@
           "hn"
         ],
         "hnMaxPoints": 1485,
-        "updatedAt": "2026-08-31T15:57:39.850Z",
+        "updatedAt": "2026-08-31T16:24:25.388Z",
         "score": 1.4
       }
     },
@@ -1086,9 +1086,109 @@
           "hn"
         ],
         "hnMaxPoints": 6,
-        "updatedAt": "2026-08-31T15:57:40.255Z",
+        "updatedAt": "2026-08-31T16:24:25.807Z",
         "score": 0.4
       }
+    },
+    {
+      "name": "小龙虾",
+      "emoji": "🦞",
+      "category": "智能体",
+      "tags": [
+        "技能路由",
+        "专家模式",
+        "中文办公",
+        "任务执行"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.3,
+      "aiReason": "国产 Agent 里把'干活'做实的：一句话触发技能路由，专家模式按领域角色拆解交付，适合中文办公（写邮件/做计划/分析文件）。注意 iOS 订阅偏高、复杂任务仍要人盯。",
+      "url": "https://xiachat.com",
+      "editorPick": false,
+      "c1": "#fff3e0",
+      "c2": "#ffe0b2"
+    },
+    {
+      "name": "Coze 扣子",
+      "emoji": "🤖",
+      "category": "智能体",
+      "tags": [
+        "无代码",
+        "工作流",
+        "插件",
+        "知识库"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.5,
+      "aiReason": "字节的 Agent 搭建平台：拖拽拼工作流、接插件与知识库，零代码出 Bot 并一键发到飞书/豆包。想自己造 Agent 但不写代码的首选。",
+      "url": "https://www.coze.com",
+      "editorPick": false,
+      "c1": "#e8f0ff",
+      "c2": "#d6e4ff"
+    },
+    {
+      "name": "Dify",
+      "emoji": "🧩",
+      "category": "智能体",
+      "tags": [
+        "开源",
+        "RAG",
+        "工作流",
+        "自托管"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.6,
+      "aiReason": "开源 LLM 应用/Agent 平台标杆：可视化编排、RAG、工具调用一条龙，可自托管保数据，开发者最爱，社区信号强、迭代快。",
+      "url": "https://dify.ai",
+      "editorPick": true,
+      "c1": "#efe9ff",
+      "c2": "#e0d6ff",
+      "community": {
+        "sources": [
+          "github",
+          "hn"
+        ],
+        "githubStars": 154007,
+        "hnMaxPoints": 185,
+        "updatedAt": "2026-08-31T16:24:27.475Z",
+        "score": 4.5
+      }
+    },
+    {
+      "name": "腾讯元器",
+      "emoji": "🐧",
+      "category": "智能体",
+      "tags": [
+        "混元",
+        "智能体",
+        "企微",
+        "公众号"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.2,
+      "aiReason": "腾讯智能体开放平台，基于混元大模型，能搭 Agent 并接公众号/企微，生态对接顺。已在腾讯系业务里的团队最省力。",
+      "url": "https://yuanqi.tencent.com",
+      "editorPick": false,
+      "c1": "#e8f1ff",
+      "c2": "#d6e6ff"
+    },
+    {
+      "name": "百度文心智能体",
+      "emoji": "🔍",
+      "category": "智能体",
+      "tags": [
+        "文心",
+        "零代码",
+        "分发",
+        "搜索流量"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.1,
+      "aiReason": "百度文心智能体平台，零代码建 Agent 并分发到搜索/百家号，流量入口好。想借百度分发触达用户的开发者友好。",
+      "url": "https://agents.baidu.com",
+      "editorPick": false,
+      "c1": "#eaf2ff",
+      "c2": "#d9e8ff"
     }
   ]
 }
