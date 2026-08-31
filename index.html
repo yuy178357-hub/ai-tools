@@ -620,7 +620,7 @@ img{ max-width:100%; display:block; }
           <select name="category" required>
             <option value="">选择分类</option>
             <option>写作</option><option>图像</option><option>代码</option><option>视频</option>
-            <option>音频</option><option>办公</option><option>搜索</option>
+            <option>音频</option><option>办公</option><option>搜索</option><option>智能体</option><option>设计</option>
           </select>
         </div>
         <div class="field"><label>定价</label>
@@ -641,125 +641,56 @@ img{ max-width:100%; display:block; }
    DATA —— 真实工具，硬编码
    ============================================================ */
 const TOOLS = [
-  { name:"ChatGPT", emoji:"🤖", category:"写作", tags:["通用对话","文案初稿","头脑风暴"], pricing:"Freemium", rating:4.9,
-    aiReason:"生态最完整的那一个：联网、画图、代码解释器、语音在同一个对话里闭环，适合当默认入口。",
-    url:"https://chatgpt.com", editorPick:true, c1:"#e6f6f1", c2:"#d3ece4" },
-
-  { name:"Claude", emoji:"🎓", category:"写作", tags:["长文写作","代码审查","文档分析"], pricing:"Freemium", rating:4.9,
-    aiReason:"长上下文里最稳的写手：处理几万字资料不跑题，中文语感偏克制，改稿比重写更好用。",
-    url:"https://claude.ai", editorPick:true, c1:"#fdeee2", c2:"#f8ddc9" },
-
-  { name:"Notion AI", emoji:"📝", category:"办公", tags:["会议纪要","知识库问答","表格填充"], pricing:"Paid", rating:4.6,
-    aiReason:"它的强项不是写得多好，而是就长在你的文档里——总结、翻译、抽字段都不用切换工具。",
-    url:"https://www.notion.so/product/ai", editorPick:false, c1:"#f2f3f5", c2:"#e4e6ea" },
-
-  { name:"Jasper", emoji:"✍️", category:"写作", tags:["营销文案","品牌语气","批量投放"], pricing:"Paid", rating:4.2,
-    aiReason:"为品牌团队而生：可固化 Tone of Voice 与术语表，同一活动批量产出几十条一致口吻的广告文案。",
-    url:"https://www.jasper.ai", editorPick:false, c1:"#eef0ff", c2:"#dfe3ff" },
-
-  { name:"Midjourney", emoji:"🎨", category:"图像", tags:["概念设计","插画","风格探索"], pricing:"Paid", rating:4.8,
-    aiReason:"审美天花板依旧最高：随手一张就有作品感，做视觉方向探索比逐字抠提示词更划算。",
-    url:"https://www.midjourney.com", editorPick:true, c1:"#eae7ff", c2:"#dcd6ff" },
-
-  { name:"Stable Diffusion", emoji:"🧬", category:"图像", tags:["本地部署","模型微调","批量出图"], pricing:"Free", rating:4.5,
-    aiReason:"唯一能完全跑在自己机器上的主流方案：数据不出本地，LoRA 微调锁死角色与画风。",
-    url:"https://stability.ai", editorPick:false, c1:"#e7f1fb", c2:"#d6e6f7" },
-
-  { name:"DALL·E 3", emoji:"🖌", category:"图像", tags:["精准指令","图内文字","海报排版"], pricing:"Freemium", rating:4.4,
-    aiReason:"最听得懂长句指令的画图模型：要求“左上角写这四个字”这类任务，成功率明显高于同类。",
-    url:"https://openai.com/index/dall-e-3/", editorPick:false, c1:"#e8f6ee", c2:"#d7ebe0" },
-
-  { name:"即梦 AI", emoji:"🌙", category:"图像", tags:["中文语义","国风插画","图生视频"], pricing:"Freemium", rating:4.4,
-    aiReason:"中文提示词直给不用翻译：东方审美、人像和电商图是它的舒适区，还能一键转视频。",
-    url:"https://jimeng.jianying.com", editorPick:false, c1:"#f4ecfb", c2:"#e8dcf6" },
-
-  { name:"Cursor", emoji:"⌨️", category:"代码", tags:["AI 编辑器","全仓问答","多文件重构"], pricing:"Freemium", rating:4.9,
-    aiReason:"从“补全一行”升级到“改完整个改动”：能读懂整个仓库并跨文件下笔，是目前最省心的 AI IDE。",
-    url:"https://cursor.com", editorPick:true, c1:"#eceef2", c2:"#dde0e6" },
-
-  { name:"GitHub Copilot", emoji:"🐙", category:"代码", tags:["行内补全","单测生成","IDE 原生"], pricing:"Paid", rating:4.7,
-    aiReason:"胜在无摩擦：装好就在你现有的 IDE 里干活，写测试和样板代码的时间基本对折。",
-    url:"https://github.com/features/copilot", editorPick:false, c1:"#f1f2f4", c2:"#e2e4e8" },
-
-  { name:"OpenAI Codex", emoji:"🧩", category:"代码", tags:["云端代理","并行任务","PR 自动化"], pricing:"Paid", rating:4.5,
-    aiReason:"把任务丢给它自己跑：在沙箱里改代码、跑测试、开 PR，你只做 review，适合批量小需求。",
-    url:"https://openai.com/codex/", editorPick:false, c1:"#e9f6f0", c2:"#d8ebe2" },
-
-  { name:"Tabnine", emoji:"🔒", category:"代码", tags:["私有部署","团队风格","合规审计"], pricing:"Freemium", rating:4.1,
-    aiReason:"给有合规红线的团队准备的：支持自托管、代码不外传，还能学习内部代码库的写法。",
-    url:"https://www.tabnine.com", editorPick:false, c1:"#e7eefc", c2:"#d6e2f8" },
-
-  { name:"Runway", emoji:"🎬", category:"视频", tags:["视频生成","智能抠像","风格迁移"], pricing:"Freemium", rating:4.6,
-    aiReason:"不只是生成器，是一整套后期工具箱：抠像、扩展画面、替换背景，专业剪辑流里真的能用。",
-    url:"https://runwayml.com", editorPick:false, c1:"#edeef1", c2:"#dfe1e6" },
-
-  { name:"Pika", emoji:"⚡", category:"视频", tags:["图生视频","创意特效","短视频"], pricing:"Freemium", rating:4.3,
-    aiReason:"玩法驱动：膨胀、融化、爆炸这类模板化特效上手极快，适合快速做几条社媒素材试水。",
-    url:"https://pika.art", editorPick:false, c1:"#fdeef4", c2:"#f8dee9" },
-
-  { name:"HeyGen", emoji:"🗣", category:"视频", tags:["数字人口播","多语配音","口型同步"], pricing:"Paid", rating:4.5,
-    aiReason:"一段文字变一条真人口播：同一素材可翻成几十种语言且口型对得上，做出海内容性价比极高。",
-    url:"https://www.heygen.com", editorPick:false, c1:"#e9f0ff", c2:"#d8e3ff" },
-
-  { name:"可灵 AI", emoji:"🐉", category:"视频", tags:["长镜头","物理一致","中文提示"], pricing:"Freemium", rating:4.6,
-    aiReason:"国产梯队里镜头最稳的：动作连贯、物理逻辑不崩，中文场景描述比英文模型理解得更准。",
-    url:"https://app.klingai.com", editorPick:false, c1:"#fdf0e6", c2:"#f8e2cf" },
-
-  { name:"ElevenLabs", emoji:"🔊", category:"音频", tags:["语音克隆","有声书","多语 TTS"], pricing:"Freemium", rating:4.8,
-    aiReason:"目前最接近真人的合成语音：停顿和情绪自然，克隆自己的声音只要一两分钟样本。",
-    url:"https://elevenlabs.io", editorPick:true, c1:"#eceff3", c2:"#dee2e8" },
-
-  { name:"Suno", emoji:"🎵", category:"音频", tags:["整曲创作","人声演唱","BGM"], pricing:"Freemium", rating:4.7,
-    aiReason:"不懂乐理也能出成品歌：给一句风格描述就有编曲和人声，做片头和自用 BGM 足够。",
-    url:"https://suno.com", editorPick:false, c1:"#f3ecfb", c2:"#e6dcf6" },
-
-  { name:"Whisper", emoji:"🎙", category:"音频", tags:["语音转写","字幕生成","离线可用"], pricing:"Free", rating:4.6,
-    aiReason:"开源转写的事实标准：口音、噪声、中英混说都扛得住，还能完全离线跑，隐私零顾虑。",
-    url:"https://github.com/openai/whisper", editorPick:false, c1:"#e8f2ef", c2:"#d7e6e1" },
-
-  { name:"Perplexity", emoji:"🔍", category:"搜索", tags:["带来源检索","竞品调研","实时资讯"], pricing:"Freemium", rating:4.8,
-    aiReason:"每句结论都挂着可点开的出处：查资料时能验证真伪，这一点比“答得漂亮”重要得多。",
-    url:"https://www.perplexity.ai", editorPick:true, c1:"#e6f2f6", c2:"#d4e7ee" },
-
-  { name:"Gamma", emoji:"📊", category:"办公", tags:["一句话成稿","网页演示","品牌模板"], pricing:"Freemium", rating:4.5,
-    aiReason:"从大纲直接到能讲的稿子：排版自动收敛不用手动对齐，做内部汇报第一版效率极高。",
-    url:"https://gamma.app", editorPick:false, c1:"#efeaff", c2:"#e1daff" },
-
-  { name:"ChatPDF", emoji:"📄", category:"办公", tags:["论文速读","合同问答","多文档对照"], pricing:"Freemium", rating:4.2,
-    aiReason:"专注一件小事并做好：上传就问、答案带页码定位，读长报告时省下的是翻页时间。",
-    url:"https://www.chatpdf.com", editorPick:false, c1:"#f2f2f4", c2:"#e4e4e9" },
-
-  { name:"秘塔 AI 搜索", emoji:"🧭", category:"搜索", tags:["中文学术","无广告","结构化大纲"], pricing:"Free", rating:4.6,
-    aiReason:"中文资料检索里干净的一档：无广告、结果自动成大纲和脑图，学术与行业报告场景很顺手。",
-    url:"https://metaso.cn", editorPick:false, c1:"#e9f1ea", c2:"#d8e5da" },
-
-  { name:"Gemini", emoji:"🌐", category:"写作", tags:["多模态","超长上下文","实时联网"], pricing:"Freemium", rating:4.8,
-    aiReason:"谷歌主力模型：原生多模态、超长上下文、直接和搜索与 Workspace 打通，需要实时信息或多模态输入的场景最顺手。",
-    url:"https://gemini.google.com", editorPick:true, c1:"#e6f0fb", c2:"#d4e3f5" },
-  { name:"Grok", emoji:"🚀", category:"写作", tags:["实时资讯","社媒联动","X 原生"], pricing:"Freemium", rating:4.5,
-    aiReason:"和 X 深度绑定的那一个：实时吃社媒热点，查当下发生的事、跟舆论节奏最快。",
-    url:"https://grok.com", editorPick:false, c1:"#eef0f3", c2:"#e2e5ea" },
-  { name:"DeepSeek", emoji:"🧠", category:"写作", tags:["推理模型","中文强劲","开源"], pricing:"Free", rating:4.7,
-    aiReason:"开源推理模型的代表：复杂逻辑与中文表现突出，API 便宜到能随便造，本地也能跑。",
-    url:"https://chat.deepseek.com", editorPick:false, c1:"#e9f3f1", c2:"#d8ebe7" },
-  { name:"通义千问 Qwen", emoji:"🐫", category:"写作", tags:["中文全能","开源生态","多模态"], pricing:"Freemium", rating:4.5,
-    aiReason:"阿里系开源主力：中文与代码均衡，Qwen 系列模型生态完整，从云端到端侧都能部署。",
-    url:"https://chat.qwen.ai", editorPick:false, c1:"#f3eefb", c2:"#e7dcf6" },
-  { name:"FLUX", emoji:"🌟", category:"图像", tags:["高质感出图","人像","文字渲染"], pricing:"Freemium", rating:4.7,
-    aiReason:"出图质感的新标杆：皮肤、光影、图内文字渲染明显更干净，很多工作流已默认用它替代 SD。",
-    url:"https://blackforestlabs.ai", editorPick:false, c1:"#e7f1fb", c2:"#d6e6f7" },
-  { name:"Sora", emoji:"🎥", category:"视频", tags:["长镜头","物理一致","叙事"], pricing:"Freemium", rating:4.6,
-    aiReason:"OpenAI 的视频模型：镜头连贯、物理逻辑稳，适合做有叙事感的片段而非单纯特效。",
-    url:"https://openai.com/sora/", editorPick:false, c1:"#e8f6ee", c2:"#d7ebe0" },
-  { name:"Claude Code", emoji:"🛠", category:"代码", tags:["终端 Agent","Repo 级改动","自动化"], pricing:"Freemium", rating:4.8,
-    aiReason:"把 Claude 放进终端当工程师用：能自己读仓库、改多文件、跑命令，适合让他独立啃一个明确的小任务。",
-    url:"https://claude.com/claude-code", editorPick:false, c1:"#fdeee2", c2:"#f8ddc9" },
-  { name:"Udio", emoji:"🎶", category:"音频", tags:["整曲创作","人声","风格多样"], pricing:"Freemium", rating:4.6,
-    aiReason:"和 Suno 并列的音乐生成头部：人声质感与编曲完整度都高，做带人声的成品歌很能打。",
-    url:"https://udio.com", editorPick:false, c1:"#f3ecfb", c2:"#e6dcf6" }
+/* TOOLS:AUTO:START */
+  {"name":"ChatGPT","emoji":"🤖","category":"写作","tags":["通用对话","文案初稿","头脑风暴"],"pricing":"Freemium","rating":4.9,"aiReason":"生态最完整的那一个：联网、画图、代码解释器、语音在同一个对话里闭环，适合当默认入口。","url":"https://chatgpt.com","editorPick":true,"c1":"#e6f6f1","c2":"#d3ece4"},
+  {"name":"Claude","emoji":"🎓","category":"写作","tags":["长文写作","代码审查","文档分析"],"pricing":"Freemium","rating":4.9,"aiReason":"长上下文里最稳的写手：处理几万字资料不跑题，中文语感偏克制，改稿比重写更好用。","url":"https://claude.ai","editorPick":true,"c1":"#fdeee2","c2":"#f8ddc9"},
+  {"name":"Notion AI","emoji":"📝","category":"办公","tags":["会议纪要","知识库问答","表格填充"],"pricing":"Paid","rating":4.6,"aiReason":"它的强项不是写得多好，而是就长在你的文档里——总结、翻译、抽字段都不用切换工具。","url":"https://www.notion.so/product/ai","editorPick":false,"c1":"#f2f3f5","c2":"#e4e6ea"},
+  {"name":"Jasper","emoji":"✍️","category":"写作","tags":["营销文案","品牌语气","批量投放"],"pricing":"Paid","rating":4.2,"aiReason":"为品牌团队而生：可固化 Tone of Voice 与术语表，同一活动批量产出几十条一致口吻的广告文案。","url":"https://www.jasper.ai","editorPick":false,"c1":"#eef0ff","c2":"#dfe3ff"},
+  {"name":"Midjourney","emoji":"🎨","category":"图像","tags":["概念设计","插画","风格探索"],"pricing":"Paid","rating":4.8,"aiReason":"审美天花板依旧最高：随手一张就有作品感，做视觉方向探索比逐字抠提示词更划算。","url":"https://www.midjourney.com","editorPick":true,"c1":"#eae7ff","c2":"#dcd6ff"},
+  {"name":"Stable Diffusion","emoji":"🧬","category":"图像","tags":["本地部署","模型微调","批量出图"],"pricing":"Free","rating":4.5,"aiReason":"唯一能完全跑在自己机器上的主流方案：数据不出本地，LoRA 微调锁死角色与画风。","url":"https://stability.ai","editorPick":false,"c1":"#e7f1fb","c2":"#d6e6f7"},
+  {"name":"DALL·E 3","emoji":"🖌","category":"图像","tags":["精准指令","图内文字","海报排版"],"pricing":"Freemium","rating":4.4,"aiReason":"最听得懂长句指令的画图模型：要求“左上角写这四个字”这类任务，成功率明显高于同类。","url":"https://openai.com/index/dall-e-3/","editorPick":false,"c1":"#e8f6ee","c2":"#d7ebe0"},
+  {"name":"即梦 AI","emoji":"🌙","category":"图像","tags":["中文语义","国风插画","图生视频"],"pricing":"Freemium","rating":4.4,"aiReason":"中文提示词直给不用翻译：东方审美、人像和电商图是它的舒适区，还能一键转视频。","url":"https://jimeng.jianying.com","editorPick":false,"c1":"#f4ecfb","c2":"#e8dcf6"},
+  {"name":"Cursor","emoji":"⌨️","category":"代码","tags":["AI 编辑器","全仓问答","多文件重构"],"pricing":"Freemium","rating":4.9,"aiReason":"从“补全一行”升级到“改完整个改动”：能读懂整个仓库并跨文件下笔，是目前最省心的 AI IDE。","url":"https://cursor.com","editorPick":true,"c1":"#eceef2","c2":"#dde0e6"},
+  {"name":"GitHub Copilot","emoji":"🐙","category":"代码","tags":["行内补全","单测生成","IDE 原生"],"pricing":"Paid","rating":4.7,"aiReason":"胜在无摩擦：装好就在你现有的 IDE 里干活，写测试和样板代码的时间基本对折。","url":"https://github.com/features/copilot","editorPick":false,"c1":"#f1f2f4","c2":"#e2e4e8"},
+  {"name":"OpenAI Codex","emoji":"🧩","category":"代码","tags":["云端代理","并行任务","PR 自动化"],"pricing":"Paid","rating":4.5,"aiReason":"把任务丢给它自己跑：在沙箱里改代码、跑测试、开 PR，你只做 review，适合批量小需求。","url":"https://openai.com/codex/","editorPick":false,"c1":"#e9f6f0","c2":"#d8ebe2"},
+  {"name":"Tabnine","emoji":"🔒","category":"代码","tags":["私有部署","团队风格","合规审计"],"pricing":"Freemium","rating":4.1,"aiReason":"给有合规红线的团队准备的：支持自托管、代码不外传，还能学习内部代码库的写法。","url":"https://www.tabnine.com","editorPick":false,"c1":"#e7eefc","c2":"#d6e2f8"},
+  {"name":"Runway","emoji":"🎬","category":"视频","tags":["视频生成","智能抠像","风格迁移"],"pricing":"Freemium","rating":4.6,"aiReason":"不只是生成器，是一整套后期工具箱：抠像、扩展画面、替换背景，专业剪辑流里真的能用。","url":"https://runwayml.com","editorPick":false,"c1":"#edeef1","c2":"#dfe1e6"},
+  {"name":"Pika","emoji":"⚡","category":"视频","tags":["图生视频","创意特效","短视频"],"pricing":"Freemium","rating":4.3,"aiReason":"玩法驱动：膨胀、融化、爆炸这类模板化特效上手极快，适合快速做几条社媒素材试水。","url":"https://pika.art","editorPick":false,"c1":"#fdeef4","c2":"#f8dee9"},
+  {"name":"HeyGen","emoji":"🗣","category":"视频","tags":["数字人口播","多语配音","口型同步"],"pricing":"Paid","rating":4.5,"aiReason":"一段文字变一条真人口播：同一素材可翻成几十种语言且口型对得上，做出海内容性价比极高。","url":"https://www.heygen.com","editorPick":false,"c1":"#e9f0ff","c2":"#d8e3ff"},
+  {"name":"可灵 AI","emoji":"🐉","category":"视频","tags":["长镜头","物理一致","中文提示"],"pricing":"Freemium","rating":4.6,"aiReason":"国产梯队里镜头最稳的：动作连贯、物理逻辑不崩，中文场景描述比英文模型理解得更准。","url":"https://app.klingai.com","editorPick":false,"c1":"#fdf0e6","c2":"#f8e2cf"},
+  {"name":"ElevenLabs","emoji":"🔊","category":"音频","tags":["语音克隆","有声书","多语 TTS"],"pricing":"Freemium","rating":4.8,"aiReason":"目前最接近真人的合成语音：停顿和情绪自然，克隆自己的声音只要一两分钟样本。","url":"https://elevenlabs.io","editorPick":true,"c1":"#eceff3","c2":"#dee2e8"},
+  {"name":"Suno","emoji":"🎵","category":"音频","tags":["整曲创作","人声演唱","BGM"],"pricing":"Freemium","rating":4.7,"aiReason":"不懂乐理也能出成品歌：给一句风格描述就有编曲和人声，做片头和自用 BGM 足够。","url":"https://suno.com","editorPick":false,"c1":"#f3ecfb","c2":"#e6dcf6"},
+  {"name":"Whisper","emoji":"🎙","category":"音频","tags":["语音转写","字幕生成","离线可用"],"pricing":"Free","rating":4.6,"aiReason":"开源转写的事实标准：口音、噪声、中英混说都扛得住，还能完全离线跑，隐私零顾虑。","url":"https://github.com/openai/whisper","editorPick":false,"c1":"#e8f2ef","c2":"#d7e6e1"},
+  {"name":"Perplexity","emoji":"🔍","category":"搜索","tags":["带来源检索","竞品调研","实时资讯"],"pricing":"Freemium","rating":4.8,"aiReason":"每句结论都挂着可点开的出处：查资料时能验证真伪，这一点比“答得漂亮”重要得多。","url":"https://www.perplexity.ai","editorPick":true,"c1":"#e6f2f6","c2":"#d4e7ee"},
+  {"name":"Gamma","emoji":"📊","category":"办公","tags":["一句话成稿","网页演示","品牌模板"],"pricing":"Freemium","rating":4.5,"aiReason":"从大纲直接到能讲的稿子：排版自动收敛不用手动对齐，做内部汇报第一版效率极高。","url":"https://gamma.app","editorPick":false,"c1":"#efeaff","c2":"#e1daff"},
+  {"name":"ChatPDF","emoji":"📄","category":"办公","tags":["论文速读","合同问答","多文档对照"],"pricing":"Freemium","rating":4.2,"aiReason":"专注一件小事并做好：上传就问、答案带页码定位，读长报告时省下的是翻页时间。","url":"https://www.chatpdf.com","editorPick":false,"c1":"#f2f2f4","c2":"#e4e4e9"},
+  {"name":"秘塔 AI 搜索","emoji":"🧭","category":"搜索","tags":["中文学术","无广告","结构化大纲"],"pricing":"Free","rating":4.6,"aiReason":"中文资料检索里干净的一档：无广告、结果自动成大纲和脑图，学术与行业报告场景很顺手。","url":"https://metaso.cn","editorPick":false,"c1":"#e9f1ea","c2":"#d8e5da"},
+  {"name":"Gemini","emoji":"🌐","category":"写作","tags":["多模态","超长上下文","实时联网"],"pricing":"Freemium","rating":4.8,"aiReason":"谷歌主力模型：原生多模态、超长上下文、直接和搜索与 Workspace 打通，需要实时信息或多模态输入的场景最顺手。","url":"https://gemini.google.com","editorPick":true,"c1":"#e6f0fb","c2":"#d4e3f5"},
+  {"name":"Grok","emoji":"🚀","category":"写作","tags":["实时资讯","社媒联动","X 原生"],"pricing":"Freemium","rating":4.5,"aiReason":"和 X 深度绑定的那一个：实时吃社媒热点，查当下发生的事、跟舆论节奏最快。","url":"https://grok.com","editorPick":false,"c1":"#eef0f3","c2":"#e2e5ea"},
+  {"name":"DeepSeek","emoji":"🧠","category":"写作","tags":["推理模型","中文强劲","开源"],"pricing":"Free","rating":4.7,"aiReason":"开源推理模型的代表：复杂逻辑与中文表现突出，API 便宜到能随便造，本地也能跑。","url":"https://chat.deepseek.com","editorPick":false,"c1":"#e9f3f1","c2":"#d8ebe7"},
+  {"name":"通义千问 Qwen","emoji":"🐫","category":"写作","tags":["中文全能","开源生态","多模态"],"pricing":"Freemium","rating":4.5,"aiReason":"阿里系开源主力：中文与代码均衡，Qwen 系列模型生态完整，从云端到端侧都能部署。","url":"https://chat.qwen.ai","editorPick":false,"c1":"#f3eefb","c2":"#e7dcf6"},
+  {"name":"FLUX","emoji":"🌟","category":"图像","tags":["高质感出图","人像","文字渲染"],"pricing":"Freemium","rating":4.7,"aiReason":"出图质感的新标杆：皮肤、光影、图内文字渲染明显更干净，很多工作流已默认用它替代 SD。","url":"https://blackforestlabs.ai","editorPick":false,"c1":"#e7f1fb","c2":"#d6e6f7"},
+  {"name":"Sora","emoji":"🎥","category":"视频","tags":["长镜头","物理一致","叙事"],"pricing":"Freemium","rating":4.6,"aiReason":"OpenAI 的视频模型：镜头连贯、物理逻辑稳，适合做有叙事感的片段而非单纯特效。","url":"https://openai.com/sora/","editorPick":false,"c1":"#e8f6ee","c2":"#d7ebe0"},
+  {"name":"Claude Code","emoji":"🛠","category":"代码","tags":["终端 Agent","Repo 级改动","自动化"],"pricing":"Freemium","rating":4.8,"aiReason":"把 Claude 放进终端当工程师用：能自己读仓库、改多文件、跑命令，适合让他独立啃一个明确的小任务。","url":"https://claude.com/claude-code","editorPick":false,"c1":"#fdeee2","c2":"#f8ddc9"},
+  {"name":"Udio","emoji":"🎶","category":"音频","tags":["整曲创作","人声","风格多样"],"pricing":"Freemium","rating":4.6,"aiReason":"和 Suno 并列的音乐生成头部：人声质感与编曲完整度都高，做带人声的成品歌很能打。","url":"https://udio.com","editorPick":false,"c1":"#f3ecfb","c2":"#e6dcf6"},
+  {"name":"Kimi","emoji":"🌊","category":"写作","tags":["超长上下文","长文综述","中文"],"pricing":"Free","rating":4.6,"aiReason":"长上下文中文里的长项：几百万 token 一次喂完论文或财报，综述和问答不丢前因后果。","url":"https://kimi.moonshot.cn","editorPick":false,"c1":"#e9f1ea","c2":"#d8e5da"},
+  {"name":"豆包 Doubao","emoji":"🅱","category":"写作","tags":["国内普及","免费","多模态"],"pricing":"Free","rating":4.5,"aiReason":"字节系国民级助手：免费、中文口语化、和抖音生态打通，日常问答和轻创作零门槛。","url":"https://www.doubao.com","editorPick":false,"c1":"#eef2fb","c2":"#dde6f7"},
+  {"name":"Meta AI (Llama)","emoji":"🦙","category":"写作","tags":["开源","自部署","端侧"],"pricing":"Free","rating":4.3,"aiReason":"开源权重的主力：能自部署、跑在端侧，想要数据不出门又要有品牌背书的选它。","url":"https://www.meta.ai","editorPick":false,"c1":"#eef0f6","c2":"#e2e5ef"},
+  {"name":"Mistral (Le Chat)","emoji":"🌬","category":"写作","tags":["欧洲开源","企业级","多语言"],"pricing":"Freemium","rating":4.3,"aiReason":"欧洲开源阵线的头牌：模型小得快、多语言稳，企业想私有化又不想绑美国云时的常用解。","url":"https://mistral.ai","editorPick":false,"c1":"#e9f0f7","c2":"#d8e5f0"},
+  {"name":"Ideogram","emoji":"✒️","category":"图像","tags":["图内文字","海报","Logo"],"pricing":"Freemium","rating":4.6,"aiReason":"图内文字渲染目前最稳：做带标语的海报、Logo 草图，字不糊不串，省掉后期修字。","url":"https://ideogram.ai","editorPick":false,"c1":"#f3ecfb","c2":"#e6dcf6"},
+  {"name":"Recraft","emoji":"🎯","category":"图像","tags":["品牌设计","矢量","一致性"],"pricing":"Freemium","rating":4.5,"aiReason":"为品牌物料而生：出矢量、锁风格、批量保持一致，做图标和视觉规范比通用画图省心。","url":"https://recraft.ai","editorPick":false,"c1":"#eaf1fb","c2":"#d8e6f6"},
+  {"name":"Veo","emoji":"🎞","category":"视频","tags":["电影感","物理一致","Google"],"pricing":"Freemium","rating":4.6,"aiReason":"谷歌的视频模型：电影感运镜和物理一致性是长板，适合做质感要求高的短片。","url":"https://deepmind.google/technologies/veo/","editorPick":false,"c1":"#e8f6ee","c2":"#d7ebe0"},
+  {"name":"Hailuo (MiniMax)","emoji":"🌀","category":"视频","tags":["中文物理","动态一致","国产"],"pricing":"Freemium","rating":4.5,"aiReason":"MiniMax 出品的视频模型：中文提示理解好、动作和物理表现稳，国内做动态短片常用。","url":"https://hailuoai.video","editorPick":false,"c1":"#fdf0e6","c2":"#f8e2cf"},
+  {"name":"Windsurf","emoji":"🏄","category":"代码","tags":["AI IDE","自主改写","Cascade"],"pricing":"Freemium","rating":4.7,"aiReason":"另一个把仓库当上下文的 AI IDE：Cascade 能自主跨文件改、跑命令，和 Cursor 正面打。","url":"https://windsurf.com","editorPick":false,"c1":"#e9f1f7","c2":"#d8e6f2"},
+  {"name":"Cline","emoji":"🔧","category":"代码","tags":["开源 Agent","VS Code","终端"],"pricing":"Free","rating":4.5,"aiReason":"开源的编码 Agent 插件：能读文件、跑终端、自我纠错，想可控又免费就上它。","url":"https://cline.bot","editorPick":false,"c1":"#e9f3f1","c2":"#d8ebe7"},
+  {"name":"Manus","emoji":"🤖","category":"智能体","tags":["自主任务","多工具","交付物"],"pricing":"Freemium","rating":4.4,"aiReason":"通用自主 Agent 的代表：给目标它自己拆步骤、调工具、出交付物，适合不想一步步盯的流程。","url":"https://manus.im","editorPick":false,"c1":"#eef0f3","c2":"#e2e5ea"},
+  {"name":"Figma AI","emoji":"🎨","category":"设计","tags":["设计稿","原型","图生界面"],"pricing":"Freemium","rating":4.4,"aiReason":"就长在 Figma 里的 AI：一句话出界面草稿、整理图层、找相似组件，设计师改稿流不中断。","url":"https://www.figma.com/ai","editorPick":false,"c1":"#f3ecfb","c2":"#e6dcf6"},
+  {"name":"ChatGPT Search","emoji":"🔎","category":"搜索","tags":["联网问答","来源引用","对话式"],"pricing":"Freemium","rating":4.6,"aiReason":"ChatGPT 的原生联网：答案带可点来源、能连续追问，日常检索正逐步替代传统搜索框。","url":"https://chatgpt.com","editorPick":false,"c1":"#e7f6f0","c2":"#d5ece2"},
+  {"name":"Genspark","emoji":"✨","category":"搜索","tags":["多引擎","火花引擎","报告生成"],"pricing":"Freemium","rating":4.3,"aiReason":"用“火花引擎”聚合多源再生成结构化报告：查一个话题能直接拿到带出处的成稿，省去自己拼。","url":"https://www.genspark.ai","editorPick":false,"c1":"#eaf1fb","c2":"#d8e6f6"}
+/* TOOLS:AUTO:END */
 ];
 
-const CATEGORIES = ["全部","写作","图像","代码","视频","音频","办公","搜索"];
+const CATEGORIES = ["全部","写作","图像","代码","视频","音频","办公","搜索","智能体","设计"];
 const PAGE = 9;
 const LS_KEY = "aiPicks.favs.v1";
 
