@@ -210,6 +210,9 @@ img{ max-width:100%; display:block; }
    ============================================================ */
 .section{ padding:var(--s-16) 0; }
 .section.tight{ padding-top:var(--s-8); }
+/* 滚动锚点避开固定导航 + 吸顶筛选栏的遮挡 */
+#all{ scroll-margin-top:calc(var(--nav-h) + 76px); }
+#picks, #about{ scroll-margin-top:calc(var(--nav-h) + 12px); }
 .sec-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:var(--s-4); margin-bottom:var(--s-8); }
 .sec-title{ font-size:var(--fs-h2); font-weight:660; letter-spacing:-.028em; color:var(--text-1); }
 .sec-desc{ margin-top:6px; font-size:var(--fs-sm); color:var(--text-3); }
@@ -728,7 +731,32 @@ const TOOLS = [
 
   { name:"秘塔 AI 搜索", emoji:"🧭", category:"搜索", tags:["中文学术","无广告","结构化大纲"], pricing:"Free", rating:4.6,
     aiReason:"中文资料检索里干净的一档：无广告、结果自动成大纲和脑图，学术与行业报告场景很顺手。",
-    url:"https://metaso.cn", editorPick:false, c1:"#e9f1ea", c2:"#d8e5da" }
+    url:"https://metaso.cn", editorPick:false, c1:"#e9f1ea", c2:"#d8e5da" },
+
+  { name:"Gemini", emoji:"🌐", category:"写作", tags:["多模态","超长上下文","实时联网"], pricing:"Freemium", rating:4.8,
+    aiReason:"谷歌主力模型：原生多模态、超长上下文、直接和搜索与 Workspace 打通，需要实时信息或多模态输入的场景最顺手。",
+    url:"https://gemini.google.com", editorPick:true, c1:"#e6f0fb", c2:"#d4e3f5" },
+  { name:"Grok", emoji:"🚀", category:"写作", tags:["实时资讯","社媒联动","X 原生"], pricing:"Freemium", rating:4.5,
+    aiReason:"和 X 深度绑定的那一个：实时吃社媒热点，查当下发生的事、跟舆论节奏最快。",
+    url:"https://grok.com", editorPick:false, c1:"#eef0f3", c2:"#e2e5ea" },
+  { name:"DeepSeek", emoji:"🧠", category:"写作", tags:["推理模型","中文强劲","开源"], pricing:"Free", rating:4.7,
+    aiReason:"开源推理模型的代表：复杂逻辑与中文表现突出，API 便宜到能随便造，本地也能跑。",
+    url:"https://chat.deepseek.com", editorPick:false, c1:"#e9f3f1", c2:"#d8ebe7" },
+  { name:"通义千问 Qwen", emoji:"🐫", category:"写作", tags:["中文全能","开源生态","多模态"], pricing:"Freemium", rating:4.5,
+    aiReason:"阿里系开源主力：中文与代码均衡，Qwen 系列模型生态完整，从云端到端侧都能部署。",
+    url:"https://chat.qwen.ai", editorPick:false, c1:"#f3eefb", c2:"#e7dcf6" },
+  { name:"FLUX", emoji:"🌟", category:"图像", tags:["高质感出图","人像","文字渲染"], pricing:"Freemium", rating:4.7,
+    aiReason:"出图质感的新标杆：皮肤、光影、图内文字渲染明显更干净，很多工作流已默认用它替代 SD。",
+    url:"https://blackforestlabs.ai", editorPick:false, c1:"#e7f1fb", c2:"#d6e6f7" },
+  { name:"Sora", emoji:"🎥", category:"视频", tags:["长镜头","物理一致","叙事"], pricing:"Freemium", rating:4.6,
+    aiReason:"OpenAI 的视频模型：镜头连贯、物理逻辑稳，适合做有叙事感的片段而非单纯特效。",
+    url:"https://openai.com/sora/", editorPick:false, c1:"#e8f6ee", c2:"#d7ebe0" },
+  { name:"Claude Code", emoji:"🛠", category:"代码", tags:["终端 Agent","Repo 级改动","自动化"], pricing:"Freemium", rating:4.8,
+    aiReason:"把 Claude 放进终端当工程师用：能自己读仓库、改多文件、跑命令，适合让他独立啃一个明确的小任务。",
+    url:"https://claude.com/claude-code", editorPick:false, c1:"#fdeee2", c2:"#f8ddc9" },
+  { name:"Udio", emoji:"🎶", category:"音频", tags:["整曲创作","人声","风格多样"], pricing:"Freemium", rating:4.6,
+    aiReason:"和 Suno 并列的音乐生成头部：人声质感与编曲完整度都高，做带人声的成品歌很能打。",
+    url:"https://udio.com", editorPick:false, c1:"#f3ecfb", c2:"#e6dcf6" }
 ];
 
 const CATEGORIES = ["全部","写作","图像","代码","视频","音频","办公","搜索"];
@@ -941,7 +969,7 @@ $("#chips").addEventListener("click", e => {
   state.cat = btn.dataset.cat;
   state.shown = PAGE;
   renderChips(); renderGrid();
-  document.querySelector(".filters").scrollIntoView({ block:"start" });
+  // 筛选结果就在吸顶栏下方原地刷新，不再自滚（避免 sticky 元素 scrollIntoView 跳动）
 });
 
 // 收藏夹切换
