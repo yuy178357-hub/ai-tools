@@ -22,7 +22,7 @@
           "hn"
         ],
         "hnMaxPoints": 2029,
-        "updatedAt": "2026-08-31T16:28:02.716Z",
+        "updatedAt": "2026-08-31T16:43:52.404Z",
         "score": 1.5
       }
     },
@@ -47,7 +47,7 @@
           "hn"
         ],
         "hnMaxPoints": 2626,
-        "updatedAt": "2026-08-31T16:28:03.313Z",
+        "updatedAt": "2026-08-31T16:43:52.971Z",
         "score": 1.5
       }
     },
@@ -72,7 +72,7 @@
           "hn"
         ],
         "hnMaxPoints": 361,
-        "updatedAt": "2026-08-31T16:28:03.866Z",
+        "updatedAt": "2026-08-31T16:43:53.402Z",
         "score": 1.2
       }
     },
@@ -97,7 +97,7 @@
           "hn"
         ],
         "hnMaxPoints": 254,
-        "updatedAt": "2026-08-31T16:28:04.339Z",
+        "updatedAt": "2026-08-31T16:43:54.355Z",
         "score": 1.1
       }
     },
@@ -122,7 +122,7 @@
           "hn"
         ],
         "hnMaxPoints": 1377,
-        "updatedAt": "2026-08-31T16:28:04.823Z",
+        "updatedAt": "2026-08-31T16:43:54.828Z",
         "score": 1.4
       }
     },
@@ -147,23 +147,24 @@
           "hn"
         ],
         "hnMaxPoints": 2421,
-        "updatedAt": "2026-08-31T16:28:05.328Z",
+        "updatedAt": "2026-08-31T16:43:55.274Z",
         "score": 1.5
       }
     },
     {
-      "name": "DALL·E 3",
+      "name": "GPT Image 2",
       "emoji": "🖌",
       "category": "图像",
       "tags": [
         "精准指令",
         "图内文字",
-        "海报排版"
+        "海报排版",
+        "OpenAI"
       ],
       "pricing": "Freemium",
-      "rating": 4.4,
-      "aiReason": "最听得懂长句指令的画图模型：要求“左上角写这四个字”这类任务，成功率明显高于同类。",
-      "url": "https://openai.com/index/dall-e-3/",
+      "rating": 4.7,
+      "aiReason": "OpenAI 当前 SOTA 图像模型（2026-04 上线，代号 ChatGPT Images 2.0）：最听得懂长句指令，图内文字渲染干净，支持中/日/韩/阿语，DALL·E 3 已退役由它接棒。",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-0/",
       "editorPick": false,
       "c1": "#e8f6ee",
       "c2": "#d7ebe0",
@@ -171,9 +172,9 @@
         "sources": [
           "hn"
         ],
-        "hnMaxPoints": 704,
-        "updatedAt": "2026-08-31T16:28:05.800Z",
-        "score": 1.3
+        "hnMaxPoints": 5,
+        "updatedAt": "2026-08-31T16:43:55.775Z",
+        "score": 0.4
       }
     },
     {
@@ -214,7 +215,7 @@
           "hn"
         ],
         "hnMaxPoints": 1511,
-        "updatedAt": "2026-08-31T16:28:06.697Z",
+        "updatedAt": "2026-08-31T16:43:56.598Z",
         "score": 1.4
       }
     },
@@ -239,7 +240,7 @@
           "hn"
         ],
         "hnMaxPoints": 2905,
-        "updatedAt": "2026-08-31T16:28:07.155Z",
+        "updatedAt": "2026-08-31T16:43:57.052Z",
         "score": 1.5
       }
     },
@@ -264,7 +265,7 @@
           "hn"
         ],
         "hnMaxPoints": 516,
-        "updatedAt": "2026-08-31T16:28:07.710Z",
+        "updatedAt": "2026-08-31T16:43:57.655Z",
         "score": 1.2
       }
     },
@@ -289,7 +290,7 @@
           "hn"
         ],
         "hnMaxPoints": 607,
-        "updatedAt": "2026-08-31T16:28:08.116Z",
+        "updatedAt": "2026-08-31T16:43:58.148Z",
         "score": 1.3
       }
     },
@@ -314,7 +315,7 @@
           "hn"
         ],
         "hnMaxPoints": 419,
-        "updatedAt": "2026-08-31T16:28:08.576Z",
+        "updatedAt": "2026-08-31T16:43:58.632Z",
         "score": 1.2
       }
     },
@@ -339,7 +340,7 @@
           "hn"
         ],
         "hnMaxPoints": 302,
-        "updatedAt": "2026-08-31T16:28:09.050Z",
+        "updatedAt": "2026-08-31T16:43:59.092Z",
         "score": 1.1
       }
     },
@@ -364,7 +365,7 @@
           "hn"
         ],
         "hnMaxPoints": 481,
-        "updatedAt": "2026-08-31T16:28:09.591Z",
+        "updatedAt": "2026-08-31T16:43:59.571Z",
         "score": 1.2
       }
     },
@@ -406,7 +407,7 @@
           "hn"
         ],
         "hnMaxPoints": 725,
-        "updatedAt": "2026-08-31T16:28:10.399Z",
+        "updatedAt": "2026-08-31T16:44:01.111Z",
         "score": 1.3
       }
     },
@@ -431,7 +432,7 @@
           "hn"
         ],
         "hnMaxPoints": 390,
-        "updatedAt": "2026-08-31T16:28:10.880Z",
+        "updatedAt": "2026-08-31T16:44:01.647Z",
         "score": 1.2
       }
     },
@@ -458,7 +459,7 @@
         ],
         "githubStars": 108208,
         "hnMaxPoints": 1705,
-        "updatedAt": "2026-08-31T16:28:12.211Z",
+        "updatedAt": "2026-08-31T16:44:02.740Z",
         "score": 5
       }
     },
@@ -483,7 +484,7 @@
           "hn"
         ],
         "hnMaxPoints": 1315,
-        "updatedAt": "2026-08-31T16:28:12.738Z",
+        "updatedAt": "2026-08-31T16:44:03.192Z",
         "score": 1.4
       }
     },
@@ -508,7 +509,7 @@
           "hn"
         ],
         "hnMaxPoints": 560,
-        "updatedAt": "2026-08-31T16:28:13.190Z",
+        "updatedAt": "2026-08-31T16:44:03.651Z",
         "score": 1.2
       }
     },
@@ -533,7 +534,7 @@
           "hn"
         ],
         "hnMaxPoints": 340,
-        "updatedAt": "2026-08-31T16:28:13.657Z",
+        "updatedAt": "2026-08-31T16:44:04.300Z",
         "score": 1.2
       }
     },
@@ -575,7 +576,7 @@
           "hn"
         ],
         "hnMaxPoints": 3346,
-        "updatedAt": "2026-08-31T16:28:14.508Z",
+        "updatedAt": "2026-08-31T16:44:05.257Z",
         "score": 1.5
       }
     },
@@ -600,7 +601,7 @@
           "hn"
         ],
         "hnMaxPoints": 1170,
-        "updatedAt": "2026-08-31T16:28:14.936Z",
+        "updatedAt": "2026-08-31T16:44:05.720Z",
         "score": 1.4
       }
     },
@@ -625,7 +626,7 @@
           "hn"
         ],
         "hnMaxPoints": 2091,
-        "updatedAt": "2026-08-31T16:28:15.427Z",
+        "updatedAt": "2026-08-31T16:44:06.193Z",
         "score": 1.5
       }
     },
@@ -667,7 +668,7 @@
           "hn"
         ],
         "hnMaxPoints": 684,
-        "updatedAt": "2026-08-31T16:28:16.255Z",
+        "updatedAt": "2026-08-31T16:44:07.065Z",
         "score": 1.3
       }
     },
@@ -692,7 +693,7 @@
           "hn"
         ],
         "hnMaxPoints": 3647,
-        "updatedAt": "2026-08-31T16:28:16.826Z",
+        "updatedAt": "2026-08-31T16:44:07.531Z",
         "score": 1.5
       }
     },
@@ -717,7 +718,7 @@
           "hn"
         ],
         "hnMaxPoints": 2445,
-        "updatedAt": "2026-08-31T16:28:17.299Z",
+        "updatedAt": "2026-08-31T16:44:08.627Z",
         "score": 1.5
       }
     },
@@ -742,7 +743,7 @@
           "hn"
         ],
         "hnMaxPoints": 234,
-        "updatedAt": "2026-08-31T16:28:17.747Z",
+        "updatedAt": "2026-08-31T16:44:09.153Z",
         "score": 1.1
       }
     },
@@ -767,7 +768,7 @@
           "hn"
         ],
         "hnMaxPoints": 2107,
-        "updatedAt": "2026-08-31T16:28:18.248Z",
+        "updatedAt": "2026-08-31T16:44:09.633Z",
         "score": 1.5
       }
     },
@@ -809,7 +810,7 @@
           "hn"
         ],
         "hnMaxPoints": 51,
-        "updatedAt": "2026-08-31T16:28:19.088Z",
+        "updatedAt": "2026-08-31T16:44:10.433Z",
         "score": 0.8
       }
     },
@@ -834,7 +835,7 @@
           "hn"
         ],
         "hnMaxPoints": 664,
-        "updatedAt": "2026-08-31T16:28:19.599Z",
+        "updatedAt": "2026-08-31T16:44:10.834Z",
         "score": 1.3
       }
     },
@@ -859,7 +860,7 @@
           "hn"
         ],
         "hnMaxPoints": 46,
-        "updatedAt": "2026-08-31T16:28:20.028Z",
+        "updatedAt": "2026-08-31T16:44:11.218Z",
         "score": 0.8
       }
     },
@@ -884,7 +885,7 @@
           "hn"
         ],
         "hnMaxPoints": 14,
-        "updatedAt": "2026-08-31T16:28:20.451Z",
+        "updatedAt": "2026-08-31T16:44:11.712Z",
         "score": 0.5
       }
     },
@@ -909,7 +910,7 @@
           "hn"
         ],
         "hnMaxPoints": 1727,
-        "updatedAt": "2026-08-31T16:28:20.896Z",
+        "updatedAt": "2026-08-31T16:44:12.136Z",
         "score": 1.5
       }
     },
@@ -934,7 +935,7 @@
           "hn"
         ],
         "hnMaxPoints": 3,
-        "updatedAt": "2026-08-31T16:28:21.275Z",
+        "updatedAt": "2026-08-31T16:44:12.563Z",
         "score": 0.3
       }
     },
@@ -959,7 +960,7 @@
           "hn"
         ],
         "hnMaxPoints": 1055,
-        "updatedAt": "2026-08-31T16:28:21.838Z",
+        "updatedAt": "2026-08-31T16:44:13.002Z",
         "score": 1.4
       }
     },
@@ -986,7 +987,7 @@
         ],
         "githubStars": 67225,
         "hnMaxPoints": 198,
-        "updatedAt": "2026-08-31T16:28:23.608Z",
+        "updatedAt": "2026-08-31T16:44:13.879Z",
         "score": 4.4
       }
     },
@@ -1011,7 +1012,7 @@
           "hn"
         ],
         "hnMaxPoints": 844,
-        "updatedAt": "2026-08-31T16:28:24.036Z",
+        "updatedAt": "2026-08-31T16:44:14.298Z",
         "score": 1.3
       }
     },
@@ -1036,7 +1037,7 @@
           "hn"
         ],
         "hnMaxPoints": 240,
-        "updatedAt": "2026-08-31T16:28:24.510Z",
+        "updatedAt": "2026-08-31T16:44:14.844Z",
         "score": 1.1
       }
     },
@@ -1061,7 +1062,7 @@
           "hn"
         ],
         "hnMaxPoints": 1485,
-        "updatedAt": "2026-08-31T16:28:24.947Z",
+        "updatedAt": "2026-08-31T16:44:15.290Z",
         "score": 1.4
       }
     },
@@ -1086,7 +1087,7 @@
           "hn"
         ],
         "hnMaxPoints": 6,
-        "updatedAt": "2026-08-31T16:28:25.531Z",
+        "updatedAt": "2026-08-31T16:44:15.765Z",
         "score": 0.4
       }
     },
@@ -1113,9 +1114,9 @@
           "github",
           "hn"
         ],
-        "githubStars": 388239,
+        "githubStars": 388244,
         "hnMaxPoints": 1349,
-        "updatedAt": "2026-08-31T16:28:26.741Z",
+        "updatedAt": "2026-08-31T16:44:16.538Z",
         "score": 4.9
       }
     },
@@ -1161,7 +1162,7 @@
         ],
         "githubStars": 154007,
         "hnMaxPoints": 185,
-        "updatedAt": "2026-08-31T16:28:28.077Z",
+        "updatedAt": "2026-08-31T16:44:17.822Z",
         "score": 4.5
       }
     },
@@ -1200,6 +1201,293 @@
       "editorPick": false,
       "c1": "#eaf2ff",
       "c2": "#d9e8ff"
+    },
+    {
+      "name": "悟空 Wukong",
+      "emoji": "🐒",
+      "category": "智能体",
+      "tags": [
+        "企业级",
+        "钉钉",
+        "Agent 办公",
+        "ToB",
+        "阿里"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.4,
+      "aiReason": "阿里巴巴/钉钉 2026-03 推出的企业级 AI 原生工作平台（ATH 事业群、钉钉团队打造）：原生调用钉钉上千项能力、安全沙箱、Skill 市场，定位'企业干活'而非个人玩具。",
+      "url": "https://wukong.dingtalk.com",
+      "editorPick": false,
+      "c1": "#fff2e6",
+      "c2": "#ffe1c4"
+    },
+    {
+      "name": "天工 Skywork",
+      "emoji": "🌞",
+      "category": "智能体",
+      "tags": [
+        "昆仑万维",
+        "超级智能体",
+        "Office",
+        "Deep Research",
+        "国产"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.3,
+      "aiReason": "昆仑万维的 AI 助手/超级智能体（Skywork）：一站式生成文档/PPT/表格/网页/播客，Deep Research 登 GAIA 榜首，国产'AI Office 智能体'代表。",
+      "url": "https://www.tiangong.cn",
+      "editorPick": false,
+      "c1": "#fff2e0",
+      "c2": "#ffe2c2"
+    },
+    {
+      "name": "Accio",
+      "emoji": "🛒",
+      "category": "搜索",
+      "tags": [
+        "B2B",
+        "AI 搜索",
+        "跨境电商",
+        "阿里国际",
+        "智能体"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.3,
+      "aiReason": "阿里国际站的 B2B AI 搜索引擎/智能体平台（2024-11 发布，2026-03 升级 Accio Work）：自然语言找供应商、自动 RFQ、出合规文件，跨境采购的'AI 买手'。",
+      "url": "https://www.accio.com",
+      "editorPick": false,
+      "c1": "#eaf0fb",
+      "c2": "#d8e4f7",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 153,
+        "updatedAt": "2026-08-31T16:44:19.770Z",
+        "score": 1
+      }
+    },
+    {
+      "name": "Devv AI",
+      "emoji": "🔩",
+      "category": "搜索",
+      "tags": [
+        "开发者搜索",
+        "RAG",
+        "代码",
+        "文档索引"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.3,
+      "aiReason": "面向开发者的 AI 搜索引擎：垂直索引官方文档/GitHub/Stack Overflow，RAG + 多 Agent，比通用搜索更懂代码问题，可连 GitHub 仓库做上下文检索。",
+      "url": "https://devv.ai",
+      "editorPick": false,
+      "c1": "#eaf1fb",
+      "c2": "#d8e6f6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 374,
+        "updatedAt": "2026-08-31T16:44:20.306Z",
+        "score": 1.2
+      }
+    },
+    {
+      "name": "文心助手",
+      "emoji": "📚",
+      "category": "写作",
+      "tags": [
+        "百度",
+        "通用对话",
+        "搜索",
+        "多模态",
+        "文小言"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.5,
+      "aiReason": "百度的旗舰 AI 助手（原文心一言/文小言，现文心 APP）：中文知识问答强、接入百度搜索与生态，月活数亿，国产通用助手第一梯队。",
+      "url": "https://yiyan.baidu.com",
+      "editorPick": false,
+      "c1": "#eef3ff",
+      "c2": "#dde6ff"
+    },
+    {
+      "name": "智谱清言 ChatGLM",
+      "emoji": "📕",
+      "category": "写作",
+      "tags": [
+        "智谱",
+        "通用对话",
+        "GLM",
+        "国产大模型",
+        "代码"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.5,
+      "aiReason": "智谱华章的旗舰助手（GLM 系列，清华 KEG 孵化）：中英双语、128K 上下文、代码与多模态均衡，国产通用大模型第一梯队，开源生态活跃。",
+      "url": "https://chatglm.cn",
+      "editorPick": false,
+      "c1": "#eef3ff",
+      "c2": "#dde6ff"
+    },
+    {
+      "name": "通义灵码 Qoder CN",
+      "emoji": "💎",
+      "category": "代码",
+      "tags": [
+        "阿里",
+        "智能编码",
+        "IDE",
+        "CLI",
+        "开源模型"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.6,
+      "aiReason": "阿里云 AI 编程助手（2026-05 升级为 Qoder CN 套件）：代码补全/Ask/Edit/Agent 多模式，支持 GLM、DeepSeek、Kimi、Qwen 切换，全链路国内云部署，Gartner 挑战者象限中国唯一。",
+      "url": "https://lingma.aliyun.com",
+      "editorPick": false,
+      "c1": "#f3eefb",
+      "c2": "#e7dcf6"
+    },
+    {
+      "name": "腾讯 CodeBuddy",
+      "emoji": "🐧",
+      "category": "代码",
+      "tags": [
+        "腾讯",
+        "AI 编程",
+        "IDE",
+        "CLI",
+        "混元"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.4,
+      "aiReason": "腾讯云代码助手，插件/IDE/CLI 三形态，混元 + DeepSeek 双轮驱动：自然语言出 PRD、Figma 转代码、CloudBase 一键部署，主打'产设研一体'。",
+      "url": "https://www.codebuddy.cn",
+      "editorPick": false,
+      "c1": "#e8f1ff",
+      "c2": "#d6e6ff"
+    },
+    {
+      "name": "豆包 MarsCode",
+      "emoji": "💻",
+      "category": "代码",
+      "tags": [
+        "字节",
+        "编程助手",
+        "云端 IDE",
+        "Trae",
+        "豆包大模型"
+      ],
+      "pricing": "Free",
+      "rating": 4.4,
+      "aiReason": "字节基于豆包大模型的 AI 开发工具（编程助手插件 + 云端 IDE，已升级为 Trae 插件）：代码补全/生成/单测/修复，国内开发者免费，超百种语言。",
+      "url": "https://www.marscode.cn",
+      "editorPick": false,
+      "c1": "#eef2fb",
+      "c2": "#dde6f7"
+    },
+    {
+      "name": "文心快码 Comate",
+      "emoji": "🧮",
+      "category": "代码",
+      "tags": [
+        "百度",
+        "智能编码",
+        "IDE",
+        "私有化"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.3,
+      "aiReason": "百度 AI 编程助手，基于文心大模型，深度对接百度工程体系与内部代码规范，支持私有化，企业内落地顺。",
+      "url": "https://comate.baidu.com",
+      "editorPick": false,
+      "c1": "#eef3ff",
+      "c2": "#dde6ff"
+    },
+    {
+      "name": "CodeGeeX",
+      "emoji": "🐲",
+      "category": "代码",
+      "tags": [
+        "智谱",
+        "开源",
+        "多语言",
+        "VS Code",
+        "插件"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.3,
+      "aiReason": "智谱出品的国产开源代码大模型与插件：多语言补全/翻译/问答，VS Code/JetBrains 可用，免费档够用，国产 IDE 辅助的稳妥选择。",
+      "url": "https://codegeex.cn",
+      "editorPick": false,
+      "c1": "#e9f1ea",
+      "c2": "#d8e5da",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 52,
+        "updatedAt": "2026-08-31T16:44:22.885Z",
+        "score": 0.8
+      }
+    },
+    {
+      "name": "Kiro",
+      "emoji": "🪐",
+      "category": "代码",
+      "tags": [
+        "AWS",
+        "规格驱动",
+        "Agent",
+        "IDE",
+        "CLI"
+      ],
+      "pricing": "Freemium",
+      "rating": 4.6,
+      "aiReason": "AWS 出品的 Agentic 开发环境：spec-driven 开发（需求→规格→代码）、多 Agent 协作、CLI/IDE/Web 全形态，把'vibe coding'升级成可审计的工程流。",
+      "url": "https://kiro.dev",
+      "editorPick": false,
+      "c1": "#fff0e6",
+      "c2": "#ffe2cf",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1063,
+        "updatedAt": "2026-08-31T16:44:23.363Z",
+        "score": 1.4
+      }
+    },
+    {
+      "name": "SWE-agent",
+      "emoji": "🐞",
+      "category": "代码",
+      "tags": [
+        "开源",
+        "研究",
+        "自动修 Bug",
+        "Princeton",
+        "SWE-bench"
+      ],
+      "pricing": "Free",
+      "rating": 4.2,
+      "aiReason": "普林斯顿开源的软件工程 Agent（NeurIPS 2024）：把 LLM 变成能自动修 GitHub issue 的 Agent，SWE-bench SOTA，研究者与想自建 coding agent 的团队必看。",
+      "url": "https://github.com/SWE-agent/SWE-agent",
+      "editorPick": false,
+      "c1": "#eef0f3",
+      "c2": "#e2e5ea",
+      "community": {
+        "sources": [
+          "github",
+          "hn"
+        ],
+        "githubStars": 20177,
+        "hnMaxPoints": 307,
+        "updatedAt": "2026-08-31T16:44:24.256Z",
+        "score": 4.1
+      }
     }
   ]
 }
