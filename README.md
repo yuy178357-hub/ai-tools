@@ -41,7 +41,17 @@ LLM_BASE_URL=https://your-endpoint/v1 LLM_API_KEY=sk-... LLM_MODEL=gpt-4o-mini \
 - **Product Hunt v2 GraphQL** —— 配置 `PH_TOKEN` + 工具 `phSlug` 时取 votes（可选）
 
 `community.score` 是 0-5 的"社区热度归一分"（stars 70% + HN 30%，log 缩放），
-作为策展 `rating` 的**旁证**，不覆盖人工打分；暂不在卡片上直接展示。
+作为策展 `rating` 的**旁证**，不覆盖人工打分；已在卡片「🔥 热度」角标与详情抽屉展示。
+
+### 启用 Product Hunt votes
+1. 在 Product Hunt 开发者后台（https://www.producthunt.com/v2/oauth/register）创建应用，拿到 **Developer Token**。
+2. 给仓库 `yuy178357-hub/ai-tools` 添加 **Actions secret** `PH_TOKEN`（值填 token）。
+3. 自动刷新工作流会读取该 secret 抓取 votes；也可本地 `PH_TOKEN=pht_xxx node scripts/gen_tools.mjs` 手动跑。
+4. `scripts/collect.mjs` 内置 `PH_SLUGS` 名称→slug 映射，覆盖全部 45 个工具，无需逐个在 `seed.json` 填 `phSlug`。
+
+## 自动刷新（GitHub Actions）
+`.github/workflows/refresh.yml` 每天 08:17（北京时间）自动抓取社区信号并重新生成
+`tools.json` + `index.html` 内联兜底，仅当有变化才提交。也可在 Actions 页面手动 `Run workflow`。
 
 ## 本地预览
 ```bash
