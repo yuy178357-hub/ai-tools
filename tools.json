@@ -16,7 +16,15 @@
       "url": "https://chatgpt.com",
       "editorPick": true,
       "c1": "#e6f6f1",
-      "c2": "#d3ece4"
+      "c2": "#d3ece4",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 2029,
+        "updatedAt": "2026-08-31T15:39:30.137Z",
+        "score": 1.5
+      }
     },
     {
       "name": "Claude",
@@ -33,7 +41,15 @@
       "url": "https://claude.ai",
       "editorPick": true,
       "c1": "#fdeee2",
-      "c2": "#f8ddc9"
+      "c2": "#f8ddc9",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 2626,
+        "updatedAt": "2026-08-31T15:39:30.710Z",
+        "score": 1.5
+      }
     },
     {
       "name": "Notion AI",
@@ -50,7 +66,15 @@
       "url": "https://www.notion.so/product/ai",
       "editorPick": false,
       "c1": "#f2f3f5",
-      "c2": "#e4e6ea"
+      "c2": "#e4e6ea",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 361,
+        "updatedAt": "2026-08-31T15:39:31.119Z",
+        "score": 1.2
+      }
     },
     {
       "name": "Jasper",
@@ -67,7 +91,15 @@
       "url": "https://www.jasper.ai",
       "editorPick": false,
       "c1": "#eef0ff",
-      "c2": "#dfe3ff"
+      "c2": "#dfe3ff",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 254,
+        "updatedAt": "2026-08-31T15:39:31.527Z",
+        "score": 1.1
+      }
     },
     {
       "name": "Midjourney",
@@ -84,7 +116,15 @@
       "url": "https://www.midjourney.com",
       "editorPick": true,
       "c1": "#eae7ff",
-      "c2": "#dcd6ff"
+      "c2": "#dcd6ff",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1377,
+        "updatedAt": "2026-08-31T15:39:31.938Z",
+        "score": 1.4
+      }
     },
     {
       "name": "Stable Diffusion",
@@ -101,7 +141,15 @@
       "url": "https://stability.ai",
       "editorPick": false,
       "c1": "#e7f1fb",
-      "c2": "#d6e6f7"
+      "c2": "#d6e6f7",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 2421,
+        "updatedAt": "2026-08-31T15:39:32.373Z",
+        "score": 1.5
+      }
     },
     {
       "name": "DALL·E 3",
@@ -118,7 +166,15 @@
       "url": "https://openai.com/index/dall-e-3/",
       "editorPick": false,
       "c1": "#e8f6ee",
-      "c2": "#d7ebe0"
+      "c2": "#d7ebe0",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 704,
+        "updatedAt": "2026-08-31T15:39:32.827Z",
+        "score": 1.3
+      }
     },
     {
       "name": "即梦 AI",
@@ -152,7 +208,15 @@
       "url": "https://cursor.com",
       "editorPick": true,
       "c1": "#eceef2",
-      "c2": "#dde0e6"
+      "c2": "#dde0e6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1511,
+        "updatedAt": "2026-08-31T15:39:33.611Z",
+        "score": 1.4
+      }
     },
     {
       "name": "GitHub Copilot",
@@ -169,7 +233,15 @@
       "url": "https://github.com/features/copilot",
       "editorPick": false,
       "c1": "#f1f2f4",
-      "c2": "#e2e4e8"
+      "c2": "#e2e4e8",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 2905,
+        "updatedAt": "2026-08-31T15:39:34.038Z",
+        "score": 1.5
+      }
     },
     {
       "name": "OpenAI Codex",
@@ -186,7 +258,15 @@
       "url": "https://openai.com/codex/",
       "editorPick": false,
       "c1": "#e9f6f0",
-      "c2": "#d8ebe2"
+      "c2": "#d8ebe2",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 516,
+        "updatedAt": "2026-08-31T15:39:34.501Z",
+        "score": 1.2
+      }
     },
     {
       "name": "Tabnine",
@@ -203,7 +283,15 @@
       "url": "https://www.tabnine.com",
       "editorPick": false,
       "c1": "#e7eefc",
-      "c2": "#d6e2f8"
+      "c2": "#d6e2f8",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 607,
+        "updatedAt": "2026-08-31T15:39:34.932Z",
+        "score": 1.3
+      }
     },
     {
       "name": "Runway",
@@ -220,7 +308,15 @@
       "url": "https://runwayml.com",
       "editorPick": false,
       "c1": "#edeef1",
-      "c2": "#dfe1e6"
+      "c2": "#dfe1e6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 419,
+        "updatedAt": "2026-08-31T15:39:35.533Z",
+        "score": 1.2
+      }
     },
     {
       "name": "Pika",
@@ -237,7 +333,15 @@
       "url": "https://pika.art",
       "editorPick": false,
       "c1": "#fdeef4",
-      "c2": "#f8dee9"
+      "c2": "#f8dee9",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 302,
+        "updatedAt": "2026-08-31T15:39:35.997Z",
+        "score": 1.1
+      }
     },
     {
       "name": "HeyGen",
@@ -254,7 +358,15 @@
       "url": "https://www.heygen.com",
       "editorPick": false,
       "c1": "#e9f0ff",
-      "c2": "#d8e3ff"
+      "c2": "#d8e3ff",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 481,
+        "updatedAt": "2026-08-31T15:39:36.415Z",
+        "score": 1.2
+      }
     },
     {
       "name": "可灵 AI",
@@ -288,7 +400,15 @@
       "url": "https://elevenlabs.io",
       "editorPick": true,
       "c1": "#eceff3",
-      "c2": "#dee2e8"
+      "c2": "#dee2e8",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 725,
+        "updatedAt": "2026-08-31T15:39:37.316Z",
+        "score": 1.3
+      }
     },
     {
       "name": "Suno",
@@ -305,7 +425,15 @@
       "url": "https://suno.com",
       "editorPick": false,
       "c1": "#f3ecfb",
-      "c2": "#e6dcf6"
+      "c2": "#e6dcf6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 390,
+        "updatedAt": "2026-08-31T15:39:37.719Z",
+        "score": 1.2
+      }
     },
     {
       "name": "Whisper",
@@ -322,7 +450,17 @@
       "url": "https://github.com/openai/whisper",
       "editorPick": false,
       "c1": "#e8f2ef",
-      "c2": "#d7e6e1"
+      "c2": "#d7e6e1",
+      "community": {
+        "sources": [
+          "github",
+          "hn"
+        ],
+        "githubStars": 108204,
+        "hnMaxPoints": 1705,
+        "updatedAt": "2026-08-31T15:39:39.049Z",
+        "score": 5
+      }
     },
     {
       "name": "Perplexity",
@@ -339,7 +477,15 @@
       "url": "https://www.perplexity.ai",
       "editorPick": true,
       "c1": "#e6f2f6",
-      "c2": "#d4e7ee"
+      "c2": "#d4e7ee",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1315,
+        "updatedAt": "2026-08-31T15:39:39.534Z",
+        "score": 1.4
+      }
     },
     {
       "name": "Gamma",
@@ -356,7 +502,15 @@
       "url": "https://gamma.app",
       "editorPick": false,
       "c1": "#efeaff",
-      "c2": "#e1daff"
+      "c2": "#e1daff",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 560,
+        "updatedAt": "2026-08-31T15:39:39.939Z",
+        "score": 1.2
+      }
     },
     {
       "name": "ChatPDF",
@@ -373,7 +527,15 @@
       "url": "https://www.chatpdf.com",
       "editorPick": false,
       "c1": "#f2f2f4",
-      "c2": "#e4e4e9"
+      "c2": "#e4e4e9",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 340,
+        "updatedAt": "2026-08-31T15:39:40.389Z",
+        "score": 1.2
+      }
     },
     {
       "name": "秘塔 AI 搜索",
@@ -407,7 +569,15 @@
       "url": "https://gemini.google.com",
       "editorPick": true,
       "c1": "#e6f0fb",
-      "c2": "#d4e3f5"
+      "c2": "#d4e3f5",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 3346,
+        "updatedAt": "2026-08-31T15:39:41.208Z",
+        "score": 1.5
+      }
     },
     {
       "name": "Grok",
@@ -424,7 +594,15 @@
       "url": "https://grok.com",
       "editorPick": false,
       "c1": "#eef0f3",
-      "c2": "#e2e5ea"
+      "c2": "#e2e5ea",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1170,
+        "updatedAt": "2026-08-31T15:39:41.636Z",
+        "score": 1.4
+      }
     },
     {
       "name": "DeepSeek",
@@ -441,7 +619,15 @@
       "url": "https://chat.deepseek.com",
       "editorPick": false,
       "c1": "#e9f3f1",
-      "c2": "#d8ebe7"
+      "c2": "#d8ebe7",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 2091,
+        "updatedAt": "2026-08-31T15:39:42.086Z",
+        "score": 1.5
+      }
     },
     {
       "name": "通义千问 Qwen",
@@ -475,7 +661,15 @@
       "url": "https://blackforestlabs.ai",
       "editorPick": false,
       "c1": "#e7f1fb",
-      "c2": "#d6e6f7"
+      "c2": "#d6e6f7",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 684,
+        "updatedAt": "2026-08-31T15:39:42.833Z",
+        "score": 1.3
+      }
     },
     {
       "name": "Sora",
@@ -488,11 +682,19 @@
       ],
       "pricing": "Freemium",
       "rating": 4.6,
-      "aiReason": "OpenAI 的视频模型：镜头连贯、物理逻辑稳，适合做有叙事感的片段而非单纯特效。",
+      "aiReason": "OpenAI 的视频模型（现 Sora 2，已支持原生音画）：镜头连贯、物理逻辑稳，适合做有叙事感的片段而非单纯特效。",
       "url": "https://openai.com/sora/",
       "editorPick": false,
       "c1": "#e8f6ee",
-      "c2": "#d7ebe0"
+      "c2": "#d7ebe0",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 3647,
+        "updatedAt": "2026-08-31T15:39:43.302Z",
+        "score": 1.5
+      }
     },
     {
       "name": "Claude Code",
@@ -509,7 +711,15 @@
       "url": "https://claude.com/claude-code",
       "editorPick": false,
       "c1": "#fdeee2",
-      "c2": "#f8ddc9"
+      "c2": "#f8ddc9",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 2445,
+        "updatedAt": "2026-08-31T15:39:43.749Z",
+        "score": 1.5
+      }
     },
     {
       "name": "Udio",
@@ -521,12 +731,20 @@
         "风格多样"
       ],
       "pricing": "Freemium",
-      "rating": 4.6,
-      "aiReason": "和 Suno 并列的音乐生成头部：人声质感与编曲完整度都高，做带人声的成品歌很能打。",
+      "rating": 4.3,
+      "aiReason": "和 Suno 并列的音乐生成头部：人声质感与编曲完整度都高。注意：2025 版权和解后转“围墙花园”，下载暂受限、产出归属公司，商用前看清条款。",
       "url": "https://udio.com",
       "editorPick": false,
       "c1": "#f3ecfb",
-      "c2": "#e6dcf6"
+      "c2": "#e6dcf6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 234,
+        "updatedAt": "2026-08-31T15:39:44.176Z",
+        "score": 1.1
+      }
     },
     {
       "name": "Kimi",
@@ -543,7 +761,15 @@
       "url": "https://kimi.moonshot.cn",
       "editorPick": false,
       "c1": "#e9f1ea",
-      "c2": "#d8e5da"
+      "c2": "#d8e5da",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 2107,
+        "updatedAt": "2026-08-31T15:39:44.569Z",
+        "score": 1.5
+      }
     },
     {
       "name": "豆包 Doubao",
@@ -577,7 +803,15 @@
       "url": "https://www.meta.ai",
       "editorPick": false,
       "c1": "#eef0f6",
-      "c2": "#e2e5ef"
+      "c2": "#e2e5ef",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 51,
+        "updatedAt": "2026-08-31T15:39:45.368Z",
+        "score": 0.8
+      }
     },
     {
       "name": "Mistral (Le Chat)",
@@ -591,10 +825,18 @@
       "pricing": "Freemium",
       "rating": 4.3,
       "aiReason": "欧洲开源阵线的头牌：模型小得快、多语言稳，企业想私有化又不想绑美国云时的常用解。",
-      "url": "https://mistral.ai",
+      "url": "https://lechat.mistral.ai",
       "editorPick": false,
       "c1": "#e9f0f7",
-      "c2": "#d8e5f0"
+      "c2": "#d8e5f0",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 664,
+        "updatedAt": "2026-08-31T15:39:45.814Z",
+        "score": 1.3
+      }
     },
     {
       "name": "Ideogram",
@@ -611,7 +853,15 @@
       "url": "https://ideogram.ai",
       "editorPick": false,
       "c1": "#f3ecfb",
-      "c2": "#e6dcf6"
+      "c2": "#e6dcf6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 46,
+        "updatedAt": "2026-08-31T15:39:46.194Z",
+        "score": 0.8
+      }
     },
     {
       "name": "Recraft",
@@ -628,7 +878,15 @@
       "url": "https://recraft.ai",
       "editorPick": false,
       "c1": "#eaf1fb",
-      "c2": "#d8e6f6"
+      "c2": "#d8e6f6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 14,
+        "updatedAt": "2026-08-31T15:39:46.615Z",
+        "score": 0.5
+      }
     },
     {
       "name": "Veo",
@@ -641,11 +899,19 @@
       ],
       "pricing": "Freemium",
       "rating": 4.6,
-      "aiReason": "谷歌的视频模型：电影感运镜和物理一致性是长板，适合做质感要求高的短片。",
+      "aiReason": "谷歌的视频模型（现 Veo 3.1，已支持原生音频）：电影感运镜和物理一致性是长板，适合做质感要求高的短片。",
       "url": "https://deepmind.google/technologies/veo/",
       "editorPick": false,
       "c1": "#e8f6ee",
-      "c2": "#d7ebe0"
+      "c2": "#d7ebe0",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1727,
+        "updatedAt": "2026-08-31T15:39:47.034Z",
+        "score": 1.5
+      }
     },
     {
       "name": "Hailuo (MiniMax)",
@@ -657,12 +923,20 @@
         "国产"
       ],
       "pricing": "Freemium",
-      "rating": 4.5,
-      "aiReason": "MiniMax 出品的视频模型：中文提示理解好、动作和物理表现稳，国内做动态短片常用。",
+      "rating": 4.6,
+      "aiReason": "MiniMax 出品，当前旗舰 Hailuo 3.0 / H3（2026-07，原生 2K + 同步音频）：中文提示理解好、动作和物理表现稳，国产动态短片常用。",
       "url": "https://hailuoai.video",
       "editorPick": false,
       "c1": "#fdf0e6",
-      "c2": "#f8e2cf"
+      "c2": "#f8e2cf",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 3,
+        "updatedAt": "2026-08-31T15:39:47.448Z",
+        "score": 0.3
+      }
     },
     {
       "name": "Windsurf",
@@ -679,7 +953,15 @@
       "url": "https://windsurf.com",
       "editorPick": false,
       "c1": "#e9f1f7",
-      "c2": "#d8e6f2"
+      "c2": "#d8e6f2",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1055,
+        "updatedAt": "2026-08-31T15:39:47.900Z",
+        "score": 1.4
+      }
     },
     {
       "name": "Cline",
@@ -696,7 +978,17 @@
       "url": "https://cline.bot",
       "editorPick": false,
       "c1": "#e9f3f1",
-      "c2": "#d8ebe7"
+      "c2": "#d8ebe7",
+      "community": {
+        "sources": [
+          "github",
+          "hn"
+        ],
+        "githubStars": 67223,
+        "hnMaxPoints": 198,
+        "updatedAt": "2026-08-31T15:39:49.179Z",
+        "score": 4.4
+      }
     },
     {
       "name": "Manus",
@@ -708,12 +1000,20 @@
         "交付物"
       ],
       "pricing": "Freemium",
-      "rating": 4.4,
-      "aiReason": "通用自主 Agent 的代表：给目标它自己拆步骤、调工具、出交付物，适合不想一步步盯的流程。",
+      "rating": 4.2,
+      "aiReason": "通用自主 Agent 的代表：给目标它自己拆步骤、调工具、出交付物，适合不想一步步盯的流程。注意：按积分计费、长任务偶发卡死，关键结论需人工复核。",
       "url": "https://manus.im",
       "editorPick": false,
       "c1": "#eef0f3",
-      "c2": "#e2e5ea"
+      "c2": "#e2e5ea",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 844,
+        "updatedAt": "2026-08-31T15:39:49.608Z",
+        "score": 1.3
+      }
     },
     {
       "name": "Figma AI",
@@ -730,7 +1030,15 @@
       "url": "https://www.figma.com/ai",
       "editorPick": false,
       "c1": "#f3ecfb",
-      "c2": "#e6dcf6"
+      "c2": "#e6dcf6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 240,
+        "updatedAt": "2026-08-31T15:39:49.997Z",
+        "score": 1.1
+      }
     },
     {
       "name": "ChatGPT Search",
@@ -747,7 +1055,15 @@
       "url": "https://chatgpt.com",
       "editorPick": false,
       "c1": "#e7f6f0",
-      "c2": "#d5ece2"
+      "c2": "#d5ece2",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 1485,
+        "updatedAt": "2026-08-31T15:39:50.408Z",
+        "score": 1.4
+      }
     },
     {
       "name": "Genspark",
@@ -760,11 +1076,19 @@
       ],
       "pricing": "Freemium",
       "rating": 4.3,
-      "aiReason": "用“火花引擎”聚合多源再生成结构化报告：查一个话题能直接拿到带出处的成稿，省去自己拼。",
+      "aiReason": "用多智能体把多源信息聚合成结构化 Sparkpage 报告：查一个话题直接拿到带出处的成稿，还能代打电话核实信息。",
       "url": "https://www.genspark.ai",
       "editorPick": false,
       "c1": "#eaf1fb",
-      "c2": "#d8e6f6"
+      "c2": "#d8e6f6",
+      "community": {
+        "sources": [
+          "hn"
+        ],
+        "hnMaxPoints": 6,
+        "updatedAt": "2026-08-31T15:39:50.814Z",
+        "score": 0.4
+      }
     }
   ]
 }

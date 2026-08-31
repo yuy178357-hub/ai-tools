@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /**
- * gen_tools.mjs — AI 工具站数据源生成器（雏形）
+ * gen_tools.mjs — AI 工具站数据源生成器（v1）
  * ---------------------------------------------------------------
  * 单一数据源：seed.json（人工策展的元数据）
+ * 真实采集：collect.mjs 的 enrich() 挂社区信号（GitHub stars + HN 热度）
  * 输出：
- *   1) tools.json        —— 站点 fetch 的主数据源（含 AI 打分）
+ *   1) tools.json        —— 站点 fetch 的主数据源（含 AI 打分 + 社区信号）
  *   2) index.html 内联 TOOLS 数组 —— 离线（file://）兜底，自动同步
  *
  * AI 打分：
@@ -12,18 +13,16 @@
  *   - 若配置 LLM_BASE_URL + LLM_API_KEY（OpenAI 兼容），
  *     则调用 LLM 为每个工具生成 { rating, aiReason }
  *
- * 真实抓取（未来）：
- *   - collect() 目前直接返回 seed；可替换为从目录站/RSS/API 抓取后映射成同结构
- *   - 评分也可改为“抓社区评分 + LLM 综述”的混合管线
- *
  * 用法：
- *   node scripts/gen_tools.mjs                  # 用策划值生成
+ *   node scripts/gen_tools.mjs                  # 策划值 + 真实社区信号
  *   LLM_BASE_URL=https://x/v1 LLM_API_KEY=sk-... node scripts/gen_tools.mjs
+ *   GH_TOKEN=ghp_xxx node scripts/gen_tools.mjs # 带 token 提 GitHub 速率
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { enrich } from "./collect.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -35,11 +34,6 @@ const INDEX_HTML = join(ROOT, "index.html");
 const LLM_BASE = process.env.LLM_BASE_URL || "";
 const LLM_KEY = process.env.LLM_API_KEY || "";
 const LLM_MODEL = process.env.LLM_MODEL || "gpt-4o-mini";
-
-/** 抓取/聚合（雏形）：返回结构化工具列表。后续可替换为真实爬取。 */
-function collect() {
-  return JSON.parse(readFileSync(SEED_PATH, "utf8"));
-}
 
 /** 调用 LLM 打分；失败返回 null 走策划值。 */
 async function llmScore(t) {
@@ -68,22 +62,26 @@ async function llmScore(t) {
 }
 
 async function main() {
-  const seed = collect();
+  const seed = JSON.parse(readFileSync(SEED_PATH, "utf8"));
+  const enriched = await enrich(seed); // 接真实抓取 / 社区评分
+
   const tools = [];
-  for (const t of seed) {
+  for (const t of enriched) {
     const scored = await llmScore(t);
+    const { repo, phSlug, ...rest } = t; // 去掉内部字段，不进公开产物
     tools.push({
-      name: t.name,
-      emoji: t.emoji,
-      category: t.category,
-      tags: t.tags,
-      pricing: t.pricing,
-      rating: scored ? Math.round(scored.rating * 10) / 10 : t.rating,
-      aiReason: scored ? scored.aiReason : t.aiReason,
-      url: t.url,
-      editorPick: !!t.editorPick,
-      c1: t.c1,
-      c2: t.c2
+      name: rest.name,
+      emoji: rest.emoji,
+      category: rest.category,
+      tags: rest.tags,
+      pricing: rest.pricing,
+      rating: scored ? Math.round(scored.rating * 10) / 10 : rest.rating,
+      aiReason: scored ? scored.aiReason : rest.aiReason,
+      url: rest.url,
+      editorPick: !!rest.editorPick,
+      c1: rest.c1,
+      c2: rest.c2,
+      ...(rest.community ? { community: rest.community } : {})
     });
   }
 
@@ -106,7 +104,9 @@ async function main() {
   }
   writeFileSync(INDEX_HTML, html);
 
+  const withCommunity = tools.filter((t) => t.community).length;
   console.log(`✅ 生成完成：${tools.length} 个工具 → tools.json + index.html 内联`);
+  console.log(`   社区信号：${withCommunity}/${tools.length} 个工具获得（GitHub/HN）`);
   console.log(`   AI 打分：${LLM_BASE ? "已启用 LLM (" + LLM_MODEL + ")" : "未配置，使用 seed 策划值"}`);
 }
 
