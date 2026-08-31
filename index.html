@@ -986,7 +986,8 @@ $("#chips").addEventListener("click", e => {
   state.cat = btn.dataset.cat;
   state.shown = PAGE;
   renderChips(); renderGrid();
-  // 筛选结果就在吸顶栏下方原地刷新，不再自滚（避免 sticky 元素 scrollIntoView 跳动）
+  // 滚到卡片区；#all 的 scroll-margin-top 已预留固定导航 + 吸顶筛选栏高度，不会被遮挡
+  $("#all").scrollIntoView({ block:"start" });
 });
 
 // 收藏夹切换
