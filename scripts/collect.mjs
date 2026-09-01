@@ -28,7 +28,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
 const GH_TOKEN = process.env.GH_TOKEN || "";
-const PH_CLIENT_ID = process.env.PH_CLIENT_ID || "";
+const PH_TOKEN = process.env.PH_TOKEN || "";          // Developer Token（优先，pht_xxx）
+const PH_CLIENT_ID = process.env.PH_CLIENT_ID || "";   // OAuth App（PH_TOKEN 不存在时降级用）
 const PH_CLIENT_SECRET = process.env.PH_CLIENT_SECRET || "";
 
 /**
@@ -38,6 +39,9 @@ const PH_CLIENT_SECRET = process.env.PH_CLIENT_SECRET || "";
 let _phAccessToken = null;
 async function getPhToken() {
   if (_phAccessToken) return _phAccessToken;
+  // Developer Token 优先（直接用，不需要换取）
+  if (PH_TOKEN) { _phAccessToken = PH_TOKEN; return PH_TOKEN; }
+  // 否则走 OAuth App client_credentials 降级
   if (!PH_CLIENT_ID || !PH_CLIENT_SECRET) return null;
   try {
     const res = await fetch("https://api.producthunt.com/v2/oauth/token", {
