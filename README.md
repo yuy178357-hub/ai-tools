@@ -38,7 +38,7 @@ LLM_BASE_URL=https://your-endpoint/v1 LLM_API_KEY=sk-... LLM_MODEL=gpt-4o-mini \
 任何源失败都优雅跳过，保留策划值：
 - **GitHub REST API** —— 开源工具的 `repo` 星标（免 key，60/hr；`GH_TOKEN` 可提速率）
 - **Hacker News Algolia** —— 工具名历史最高 points（社区热度代理，免 key）
-- **Product Hunt v2 GraphQL** —— 配置 `PH_TOKEN` + 工具 `phSlug` 时取 votes（可选）
+- **Product Hunt v2 GraphQL** —— 配置 `PH_CLIENT_ID` + `PH_CLIENT_SECRET` 时走 client_credentials 换 token，取 votes（可选，scope=public 部分帖子可读）
 
 `community.score` 是 0-5 的"社区热度归一分"（stars 70% + HN 30%，log 缩放），
 作为策展 `rating` 的**旁证**，不覆盖人工打分；已在卡片「🔥 热度」角标与详情抽屉展示。

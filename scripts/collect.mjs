@@ -28,7 +28,32 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
 const GH_TOKEN = process.env.GH_TOKEN || "";
-const PH_TOKEN = process.env.PH_TOKEN || "";
+const PH_CLIENT_ID = process.env.PH_CLIENT_ID || "";
+const PH_CLIENT_SECRET = process.env.PH_CLIENT_SECRET || "";
+
+/**
+ * 获取 PH access token（client_credentials flow）。
+ * 缓存在模块级别，进程内复用，避免每次请求都换 token。
+ */
+let _phAccessToken = null;
+async function getPhToken() {
+  if (_phAccessToken) return _phAccessToken;
+  if (!PH_CLIENT_ID || !PH_CLIENT_SECRET) return null;
+  try {
+    const res = await fetch("https://api.producthunt.com/v2/oauth/token", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        client_id: PH_CLIENT_ID,
+        client_secret: PH_CLIENT_SECRET,
+        grant_type: "client_credentials"
+      })
+    });
+    const j = await res.json();
+    if (j.access_token) { _phAccessToken = j.access_token; return _phAccessToken; }
+  } catch (e) { console.warn("  ⚠ PH token 获取失败：", e.message); }
+  return null;
+}
 
 // Product Hunt slug 映射（无 token 时不生效；slug 不准时优雅返回 null）
 const PH_SLUGS = {
@@ -38,12 +63,17 @@ const PH_SLUGS = {
   "Stable Diffusion":"stable-diffusion", "FLUX":"flux1", "Sora":"sora", "Claude Code":"claude-code",
   "Kimi":"kimi", "DeepSeek":"deepseek", "Manus":"manus", "Figma AI":"figma-ai",
   "ChatGPT Search":"chatgpt-search", "Genspark":"genspark", "Windsurf":"windsurf", "Cline":"cline",
-  "Veo":"veo", "Hailuo (MiniMax)":"hailuo", "Grok":"grok", "Gemini":"gemini", "Notion AI":"notion-ai",
-  "Jasper":"jasper", "DALL·E 3":"dall-e-3", "即梦 AI":"jimeng", "可灵 AI":"kling-ai",
-  "通义千问 Qwen":"qwen", "豆包 Doubao":"doubao", "Mistral (Le Chat)":"mistral-le-chat",
-  "Meta AI (Llama)":"meta-ai", "Ideogram":"ideogram", "Recraft":"recraft", "Tabnine":"tabnine",
-  "OpenAI Codex":"openai-codex", "Whisper":"whisper", "ChatPDF":"chatpdf", "秘塔 AI 搜索":"metaso",
-  "Udio":"udio"
+  "Veo":"veo", "Hailuo (MiniMax)":"hailuo", "Grok":"grok", "Gemini":"gemini",
+  "Notion AI":"notion-ai", "Jasper":"jasper", "即梦 AI":"jimeng", "可灵 AI":"kling-ai",
+  "通义千问 Qwen":"qwen", "Mistral (Le Chat)":"mistral-le-chat",
+  "Meta AI (Llama)":"meta-ai", "Tabnine":"tabnine",
+  "OpenAI Codex":"openai-codex", "Whisper":"whisper", "ChatPDF":"chatpdf",
+  "秘塔 AI 搜索":"metaso", "Udio":"udio",
+  // 2026-09 新增工具
+  "GPT Image 2":"dall-e-3",   // DALL·E 3 PH 条目由 GPT Image 2 接棒
+  "豆包 Doubao":"doubao", "文心助手":"wenxin-ai", "智谱清言 ChatGLM":"zhipu-ai",
+  "文心快码 Comate":"baidu-comate", "腾讯 CodeBuddy":"codebuddy",
+  "Accio":"accio-com", "Devv AI":"devv-ai", "天工 Skywork":"tiangong-ai"
 };
 
 /** 带超时的 JSON GET */
@@ -98,21 +128,16 @@ async function hnPoints(name) {
   return max;
 }
 
-/** Product Hunt votes（需 PH_TOKEN + slug） */
-async function phVotes(slug) {
-  if (!PH_TOKEN || !slug) return null;
-  const body = {
-    query: `query($slug:String!){post(slug:$slug){votesCount}}`,
-    variables: { slug }
-  };
+/** Product Hunt votes（需 access token + slug）；从 getPhToken() 缓存拿 token */
+async function phVotes(slug, token) {
+  if (!token || !slug) return null;
   const j = await fetchJSON("https://api.producthunt.com/v2/api/graphql", {
     method: "POST",
-    headers: {
-      "content-type": "application/json",
-      authorization: "Bearer " + PH_TOKEN,
-      accept: "application/json"
-    },
-    body: JSON.stringify(body)
+    headers: { "content-type": "application/json", authorization: "Bearer " + token },
+    body: JSON.stringify({
+      query: `query($slug:String!){post(slug:$slug){votesCount}}`,
+      variables: { slug }
+    })
   });
   return j?.data?.post?.votesCount ?? null;
 }
@@ -157,14 +182,17 @@ export async function enrich(seed) {
     } catch (e) {
       console.warn(`  ⚠ HN 信号失败：${t.name}`);
     }
-    // 可选 PH（仅配置了 token 时；slug 来自工具自带 phSlug 或 PH_SLUGS 映射）
+    // 可选 PH（需 PH_CLIENT_ID + PH_CLIENT_SECRET；slug 来自工具自带 phSlug 或 PH_SLUGS 映射）
     const slug = t.phSlug || PH_SLUGS[t.name];
-    if (PH_TOKEN && slug) {
+    if (PH_CLIENT_ID && PH_CLIENT_SECRET && slug) {
       try {
-        const v = await phVotes(slug);
-        if (typeof v === "number") {
-          community.phVotes = v;
-          community.sources.push("producthunt");
+        const token = await getPhToken();
+        if (token) {
+          const v = await phVotes(slug, token);
+          if (typeof v === "number") {
+            community.phVotes = v;
+            community.sources.push("producthunt");
+          }
         }
       } catch (e) {
         console.warn(`  ⚠ PH 信号失败：${t.name}`);

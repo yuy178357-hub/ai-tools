@@ -21,7 +21,8 @@ jobs:
       - name: Regenerate tools.json (live community signals)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PH_TOKEN: ${{ secrets.PH_TOKEN }}
+          PH_CLIENT_ID: ${{ secrets.PH_CLIENT_ID }}
+          PH_CLIENT_SECRET: ${{ secrets.PH_CLIENT_SECRET }}
         run: node scripts/gen_tools.mjs
       - name: Commit & push if changed
         run: |
