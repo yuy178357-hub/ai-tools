@@ -186,11 +186,11 @@ export async function enrich(seed) {
     } catch (e) {
       console.warn(`  ⚠ HN 信号失败：${t.name}`);
     }
-    // 可选 PH（需 PH_CLIENT_ID + PH_CLIENT_SECRET；slug 来自工具自带 phSlug 或 PH_SLUGS 映射）
+    // 可选 PH（Developer Token 优先；无则降级 OAuth App；slug 来自 PH_SLUGS 映射）
     const slug = t.phSlug || PH_SLUGS[t.name];
-    if (PH_CLIENT_ID && PH_CLIENT_SECRET && slug) {
+    if ((PH_TOKEN || (PH_CLIENT_ID && PH_CLIENT_SECRET)) && slug) {
       try {
-        const token = await getPhToken();
+        const token = PH_TOKEN || await getPhToken();
         if (token) {
           const v = await phVotes(slug, token);
           if (typeof v === "number") {
