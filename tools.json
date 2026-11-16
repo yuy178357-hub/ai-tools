@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "tools": [
     {
       "name": "ChatGPT",
@@ -24,7 +24,7 @@
         ],
         "hnMaxPoints": 2029,
         "phVotes": 1640,
-        "updatedAt": "2026-11-15T06:42:11.920Z",
+        "updatedAt": "2026-11-16T06:39:58.740Z",
         "score": 1.5
       }
     },
@@ -49,7 +49,7 @@
           "hn"
         ],
         "hnMaxPoints": 2626,
-        "updatedAt": "2026-11-15T06:42:12.271Z",
+        "updatedAt": "2026-11-16T06:39:59.127Z",
         "score": 1.5
       }
     },
@@ -76,7 +76,7 @@
         ],
         "hnMaxPoints": 361,
         "phVotes": 4,
-        "updatedAt": "2026-11-15T06:42:12.590Z",
+        "updatedAt": "2026-11-16T06:39:59.517Z",
         "score": 1.2
       }
     },
@@ -103,7 +103,7 @@
         ],
         "hnMaxPoints": 254,
         "phVotes": 7,
-        "updatedAt": "2026-11-15T06:42:12.955Z",
+        "updatedAt": "2026-11-16T06:39:59.962Z",
         "score": 1.1
       }
     },
@@ -130,7 +130,7 @@
         ],
         "hnMaxPoints": 1377,
         "phVotes": 421,
-        "updatedAt": "2026-11-15T06:42:13.273Z",
+        "updatedAt": "2026-11-16T06:40:00.310Z",
         "score": 1.4
       }
     },
@@ -157,7 +157,7 @@
         ],
         "hnMaxPoints": 2421,
         "phVotes": 109,
-        "updatedAt": "2026-11-15T06:42:13.707Z",
+        "updatedAt": "2026-11-16T06:40:00.917Z",
         "score": 1.5
       }
     },
@@ -185,7 +185,7 @@
         ],
         "hnMaxPoints": 5,
         "phVotes": 853,
-        "updatedAt": "2026-11-15T06:42:14.294Z",
+        "updatedAt": "2026-11-16T06:40:01.460Z",
         "score": 0.4
       }
     },
@@ -229,7 +229,7 @@
         ],
         "hnMaxPoints": 1511,
         "phVotes": 23,
-        "updatedAt": "2026-11-15T06:42:15.329Z",
+        "updatedAt": "2026-11-16T06:40:04.600Z",
         "score": 1.4
       }
     },
@@ -254,7 +254,7 @@
           "hn"
         ],
         "hnMaxPoints": 2905,
-        "updatedAt": "2026-11-15T06:42:15.650Z",
+        "updatedAt": "2026-11-16T06:40:05.033Z",
         "score": 1.5
       }
     },
@@ -279,7 +279,7 @@
           "hn"
         ],
         "hnMaxPoints": 516,
-        "updatedAt": "2026-11-15T06:42:16.076Z",
+        "updatedAt": "2026-11-16T06:40:05.442Z",
         "score": 1.2
       }
     },
@@ -306,7 +306,7 @@
         ],
         "hnMaxPoints": 607,
         "phVotes": 9,
-        "updatedAt": "2026-11-15T06:42:16.531Z",
+        "updatedAt": "2026-11-16T06:40:06.304Z",
         "score": 1.3
       }
     },
@@ -331,7 +331,7 @@
           "hn"
         ],
         "hnMaxPoints": 419,
-        "updatedAt": "2026-11-15T06:42:16.844Z",
+        "updatedAt": "2026-11-16T06:40:06.961Z",
         "score": 1.2
       }
     },
@@ -358,7 +358,7 @@
         ],
         "hnMaxPoints": 302,
         "phVotes": 290,
-        "updatedAt": "2026-11-15T06:42:17.203Z",
+        "updatedAt": "2026-11-16T06:40:07.715Z",
         "score": 1.1
       }
     },
@@ -385,7 +385,7 @@
         ],
         "hnMaxPoints": 24,
         "phVotes": 266,
-        "updatedAt": "2026-11-15T06:42:17.513Z",
+        "updatedAt": "2026-11-16T06:40:08.408Z",
         "score": 0.6
       }
     },
@@ -427,7 +427,7 @@
           "hn"
         ],
         "hnMaxPoints": 725,
-        "updatedAt": "2026-11-15T06:42:18.071Z",
+        "updatedAt": "2026-11-16T06:40:12.032Z",
         "score": 1.3
       }
     },
@@ -454,7 +454,7 @@
         ],
         "hnMaxPoints": 390,
         "phVotes": 8,
-        "updatedAt": "2026-11-15T06:42:18.371Z",
+        "updatedAt": "2026-11-16T06:40:12.624Z",
         "score": 1.2
       }
     },
@@ -480,10 +480,10 @@
           "hn",
           "producthunt"
         ],
-        "githubStars": 112740,
+        "githubStars": 112813,
         "hnMaxPoints": 1705,
         "phVotes": 3,
-        "updatedAt": "2026-11-15T06:42:19.110Z",
+        "updatedAt": "2026-11-16T06:40:13.376Z",
         "score": 5
       }
     },
@@ -510,7 +510,7 @@
         ],
         "hnMaxPoints": 1315,
         "phVotes": 225,
-        "updatedAt": "2026-11-15T06:42:19.448Z",
+        "updatedAt": "2026-11-16T06:40:14.352Z",
         "score": 1.4
       }
     },
@@ -537,7 +537,7 @@
         ],
         "hnMaxPoints": 560,
         "phVotes": 1165,
-        "updatedAt": "2026-11-15T06:42:19.827Z",
+        "updatedAt": "2026-11-16T06:40:16.296Z",
         "score": 1.2
       }
     },
@@ -564,7 +564,7 @@
         ],
         "hnMaxPoints": 340,
         "phVotes": 176,
-        "updatedAt": "2026-11-15T06:42:20.132Z",
+        "updatedAt": "2026-11-16T06:40:17.918Z",
         "score": 1.2
       }
     },
@@ -608,7 +608,7 @@
         ],
         "hnMaxPoints": 3346,
         "phVotes": 15,
-        "updatedAt": "2026-11-15T06:42:20.860Z",
+        "updatedAt": "2026-11-16T06:40:22.183Z",
         "score": 1.5
       }
     },
@@ -635,7 +635,7 @@
         ],
         "hnMaxPoints": 1170,
         "phVotes": 4,
-        "updatedAt": "2026-11-15T06:42:21.176Z",
+        "updatedAt": "2026-11-16T06:40:22.608Z",
         "score": 1.4
       }
     },
@@ -662,7 +662,7 @@
         ],
         "hnMaxPoints": 2355,
         "phVotes": 11,
-        "updatedAt": "2026-11-15T06:42:21.494Z",
+        "updatedAt": "2026-11-16T06:40:23.413Z",
         "score": 1.5
       }
     },
@@ -687,7 +687,7 @@
           "producthunt"
         ],
         "phVotes": 3,
-        "updatedAt": "2026-11-15T06:42:21.747Z",
+        "updatedAt": "2026-11-16T06:40:24.100Z",
         "score": 0
       }
     },
@@ -712,7 +712,7 @@
           "hn"
         ],
         "hnMaxPoints": 684,
-        "updatedAt": "2026-11-15T06:42:22.177Z",
+        "updatedAt": "2026-11-16T06:40:24.644Z",
         "score": 1.3
       }
     },
@@ -739,7 +739,7 @@
         ],
         "hnMaxPoints": 3647,
         "phVotes": 2,
-        "updatedAt": "2026-11-15T06:42:22.504Z",
+        "updatedAt": "2026-11-16T06:40:25.038Z",
         "score": 1.5
       }
     },
@@ -766,7 +766,7 @@
         ],
         "hnMaxPoints": 2445,
         "phVotes": 395,
-        "updatedAt": "2026-11-15T06:42:22.911Z",
+        "updatedAt": "2026-11-16T06:40:25.723Z",
         "score": 1.5
       }
     },
@@ -793,7 +793,7 @@
         ],
         "hnMaxPoints": 234,
         "phVotes": 8,
-        "updatedAt": "2026-11-15T06:42:23.264Z",
+        "updatedAt": "2026-11-16T06:40:26.164Z",
         "score": 1.1
       }
     },
@@ -818,7 +818,7 @@
           "hn"
         ],
         "hnMaxPoints": 2107,
-        "updatedAt": "2026-11-15T06:42:23.623Z",
+        "updatedAt": "2026-11-16T06:40:26.710Z",
         "score": 1.5
       }
     },
@@ -862,7 +862,7 @@
         ],
         "hnMaxPoints": 51,
         "phVotes": 94,
-        "updatedAt": "2026-11-15T06:42:24.196Z",
+        "updatedAt": "2026-11-16T06:40:27.605Z",
         "score": 0.8
       }
     },
@@ -887,7 +887,7 @@
           "hn"
         ],
         "hnMaxPoints": 664,
-        "updatedAt": "2026-11-15T06:42:24.515Z",
+        "updatedAt": "2026-11-16T06:40:28.034Z",
         "score": 1.3
       }
     },
@@ -912,7 +912,7 @@
           "hn"
         ],
         "hnMaxPoints": 46,
-        "updatedAt": "2026-11-15T06:42:24.764Z",
+        "updatedAt": "2026-11-16T06:40:28.277Z",
         "score": 0.8
       }
     },
@@ -937,7 +937,7 @@
           "hn"
         ],
         "hnMaxPoints": 14,
-        "updatedAt": "2026-11-15T06:42:25.137Z",
+        "updatedAt": "2026-11-16T06:40:28.617Z",
         "score": 0.5
       }
     },
@@ -964,7 +964,7 @@
         ],
         "hnMaxPoints": 1727,
         "phVotes": 2,
-        "updatedAt": "2026-11-15T06:42:25.463Z",
+        "updatedAt": "2026-11-16T06:40:29.028Z",
         "score": 1.5
       }
     },
@@ -989,7 +989,7 @@
           "hn"
         ],
         "hnMaxPoints": 3,
-        "updatedAt": "2026-11-15T06:42:25.938Z",
+        "updatedAt": "2026-11-16T06:40:29.771Z",
         "score": 0.3
       }
     },
@@ -1014,7 +1014,7 @@
           "hn"
         ],
         "hnMaxPoints": 1055,
-        "updatedAt": "2026-11-15T06:42:26.501Z",
+        "updatedAt": "2026-11-16T06:40:30.141Z",
         "score": 1.4
       }
     },
@@ -1040,10 +1040,10 @@
           "hn",
           "producthunt"
         ],
-        "githubStars": 71644,
+        "githubStars": 71670,
         "hnMaxPoints": 198,
         "phVotes": 105,
-        "updatedAt": "2026-11-15T06:42:27.175Z",
+        "updatedAt": "2026-11-16T06:40:30.914Z",
         "score": 4.4
       }
     },
@@ -1070,7 +1070,7 @@
         ],
         "hnMaxPoints": 844,
         "phVotes": 89,
-        "updatedAt": "2026-11-15T06:42:27.682Z",
+        "updatedAt": "2026-11-16T06:40:31.280Z",
         "score": 1.3
       }
     },
@@ -1097,7 +1097,7 @@
         ],
         "hnMaxPoints": 240,
         "phVotes": 126,
-        "updatedAt": "2026-11-15T06:42:28.034Z",
+        "updatedAt": "2026-11-16T06:40:31.636Z",
         "score": 1.1
       }
     },
@@ -1124,7 +1124,7 @@
         ],
         "hnMaxPoints": 1485,
         "phVotes": 645,
-        "updatedAt": "2026-11-15T06:42:28.786Z",
+        "updatedAt": "2026-11-16T06:40:32.704Z",
         "score": 1.4
       }
     },
@@ -1151,7 +1151,7 @@
         ],
         "hnMaxPoints": 6,
         "phVotes": 463,
-        "updatedAt": "2026-11-15T06:42:29.077Z",
+        "updatedAt": "2026-11-16T06:40:33.231Z",
         "score": 0.4
       }
     },
@@ -1178,9 +1178,9 @@
           "github",
           "hn"
         ],
-        "githubStars": 394481,
+        "githubStars": 394546,
         "hnMaxPoints": 1349,
-        "updatedAt": "2026-11-15T06:42:29.599Z",
+        "updatedAt": "2026-11-16T06:40:33.747Z",
         "score": 4.9
       }
     },
@@ -1224,9 +1224,9 @@
           "github",
           "hn"
         ],
-        "githubStars": 161181,
+        "githubStars": 161234,
         "hnMaxPoints": 185,
-        "updatedAt": "2026-11-15T06:42:30.324Z",
+        "updatedAt": "2026-11-16T06:40:34.554Z",
         "score": 4.5
       }
     },
@@ -1327,7 +1327,7 @@
           "hn"
         ],
         "hnMaxPoints": 153,
-        "updatedAt": "2026-11-15T06:42:31.710Z",
+        "updatedAt": "2026-11-16T06:40:35.941Z",
         "score": 1
       }
     },
@@ -1355,7 +1355,7 @@
         ],
         "hnMaxPoints": 374,
         "phVotes": 458,
-        "updatedAt": "2026-11-15T06:42:32.173Z",
+        "updatedAt": "2026-11-16T06:40:36.533Z",
         "score": 1.2
       }
     },
@@ -1495,7 +1495,7 @@
           "hn"
         ],
         "hnMaxPoints": 52,
-        "updatedAt": "2026-11-15T06:42:33.914Z",
+        "updatedAt": "2026-11-16T06:40:38.682Z",
         "score": 0.8
       }
     },
@@ -1522,7 +1522,7 @@
           "hn"
         ],
         "hnMaxPoints": 1063,
-        "updatedAt": "2026-11-15T06:42:34.145Z",
+        "updatedAt": "2026-11-16T06:40:38.918Z",
         "score": 1.4
       }
     },
@@ -1549,9 +1549,9 @@
           "github",
           "hn"
         ],
-        "githubStars": 20805,
+        "githubStars": 20816,
         "hnMaxPoints": 307,
-        "updatedAt": "2026-11-15T06:42:34.761Z",
+        "updatedAt": "2026-11-16T06:40:39.586Z",
         "score": 4.2
       }
     }
